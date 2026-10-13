@@ -106,7 +106,23 @@
         "Further study in health systems management or public administration",
         "Exploring health programme coordination or policy implementation work"
       ],
-      "sourceIds": ["who-governance"]
+      "sourceIds": ["who-governance"],
+      "overview": [
+        "Leadership and governance offers a way to examine who sets service priorities, how responsibilities are shared, and how decisions are explained to the public. You might be drawn to the organisational questions behind a service rather than only its clinical work.",
+        "For exploration, separate setting a direction from the rules and accountability arrangements that guide decisions. A hypothetical clinic decision can help you ask whose views are represented, who has authority, and how people can raise concerns. This is draft educational framing, not a description of one country’s system."
+      ],
+      "relatedNiches": [
+        {
+          "nicheId": "health-financing",
+          "explanation": "Decisions about service priorities connect governance to how budgets are allocated and explained. Explore financing to ask how those decisions shape the use of funds.",
+          "sourceIds": ["who-governance", "who-financing"]
+        },
+        {
+          "nicheId": "health-workforce",
+          "explanation": "Organisational responsibilities and leadership decisions connect to how health workers are deployed and supported. Explore workforce questions to see a different side of service management.",
+          "sourceIds": ["who-governance", "who-workforce"]
+        }
+      ]
     },
     {
       "id": "health-financing",
@@ -138,7 +154,23 @@
         "Further study in health economics or health financing policy",
         "Exploring health financing analysis, insurance policy or programme budgeting domains"
       ],
-      "sourceIds": ["who-financing"]
+      "sourceIds": ["who-financing"],
+      "overview": [
+        "Health financing brings together questions about raising funds, sharing financial risk and paying for services. An interest in access or affordability can lead to exploring these arrangements and the different groups they include.",
+        "Health insurance can be one arrangement for pooling resources, but pooling is broader than insurance. Exploring a hypothetical public budget alongside a hypothetical insurance pool can help distinguish collection, pooling and purchasing. This draft framing needs verification against the proposed WHO reference before authoritative use."
+      ],
+      "relatedNiches": [
+        {
+          "nicheId": "leadership-governance",
+          "explanation": "Financing choices raise questions about who has authority over funds and who is accountable for spending. Explore governance to examine those decision arrangements.",
+          "sourceIds": ["who-financing", "who-governance"]
+        },
+        {
+          "nicheId": "health-workforce",
+          "explanation": "Funding arrangements and workforce planning meet when services consider staffing resources. Explore workforce distribution without assuming that funding alone explains staffing gaps.",
+          "sourceIds": ["who-financing", "who-workforce"]
+        }
+      ]
     },
     {
       "id": "health-workforce",
@@ -170,7 +202,23 @@
         "Further study in health workforce planning or health services research",
         "Exploring workforce analysis, training coordination or health service management domains"
       ],
-      "sourceIds": ["who-workforce"]
+      "sourceIds": ["who-workforce"],
+      "overview": [
+        "Health workforce exploration focuses on the people who make health services possible: their education, roles, distribution, working conditions and support. An interest in unequal service capacity may lead you to ask how workforce decisions are made.",
+        "A simple worker count does not explain the full picture. Skills, workload, geography and population needs can change what a staffing comparison means. Treat a fictional staffing scenario as a starting point for questions rather than a staffing recommendation."
+      ],
+      "relatedNiches": [
+        {
+          "nicheId": "leadership-governance",
+          "explanation": "Workforce decisions connect to organisational roles, participation and accountability. Explore governance to ask who shapes deployment or retention decisions.",
+          "sourceIds": ["who-workforce", "who-governance"]
+        },
+        {
+          "nicheId": "health-financing",
+          "explanation": "Questions about workforce resources can connect to service budgets and payment arrangements. Explore financing to examine one part of the resource picture, without treating it as the sole explanation.",
+          "sourceIds": ["who-workforce", "who-financing"]
+        }
+      ]
     }
   ],
   "concepts": [

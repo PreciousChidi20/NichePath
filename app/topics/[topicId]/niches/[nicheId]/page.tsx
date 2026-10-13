@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { content, getNiche, getSources, getTopic } from "@/lib/content";
 import { SourceList } from "@/components/source-list";
+import { NicheConnections } from "@/components/niche-connections";
 
 export function generateStaticParams() {
   return content.niches.map((niche) => ({
@@ -42,6 +43,15 @@ export default async function NichePage({
       </div>
       <div className="detail-grid">
         <div className="space-y-7">
+          <section className="panel" aria-labelledby="niche-overview-title">
+            <div className="eyebrow">Understand the niche</div>
+            <h2 id="niche-overview-title">What this niche involves</h2>
+            <div className="space-y-4">
+              {niche.overview.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </section>
           <section className="panel">
             <div className="eyebrow">Make the connection</div>
             <h2>Where it is applied</h2>
@@ -102,6 +112,7 @@ export default async function NichePage({
           </section>
         </aside>
       </div>
+      <NicheConnections data={content} niche={niche} />
       <section className="panel mt-8" aria-labelledby="sources-title">
         <div className="eyebrow">Read, question, verify</div>
         <h2 id="sources-title">Sources to review</h2>
@@ -113,7 +124,7 @@ export default async function NichePage({
         <SourceList sources={getSources(niche.sourceIds)} />
       </section>
       <Link className="card-link mt-8" href={`/topics/${topicId}`}>
-        ← Explore another Health Systems interest
+        ← Explore another {topic.title} interest
       </Link>
     </>
   );

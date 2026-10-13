@@ -48,7 +48,7 @@ Use Next.js App Router, TypeScript, Tailwind CSS, version-controlled JSON conten
 
 For every future milestone:
 
-1. Read this AGENTS.md before implementing changes.
+1. Read this AGENTS.md, `docs/IMPLEMENTATION_PLAN.md` and `docs/PROGRESS.md` before implementing changes. Use the plan for approved scope and PROGRESS for actual completed tasks, validation, delivery and blockers. Do not restart completed work.
 2. Confirm the correct repository (`PreciousChidi20/NichePath`) and base branch (normally `main`, verify remotely).
 3. Create a dedicated milestone feature branch where supported.
 4. Implement only the approved milestone.
@@ -58,7 +58,9 @@ For every future milestone:
 8. Push the branch and open a GitHub pull request if the environment permits.
 9. If automatic PR creation is unavailable, prepare changes using the available GitHub workflow and provide exact manual steps.
 10. Never merge automatically.
-11. Never start another milestone without approval.
+11. Never start an unapproved milestone. The user has authorised M3–M7 in order; follow the plan and stop at required merge boundaries. Begin each dependent branch from the latest approved `main`, not an unmerged milestone branch.
+
+Keep `docs/PROGRESS.md` updated with actual task completion, test results, branch/commit/push/PR evidence, blockers and an exact resume instruction. If interrupted, preserve work using the available workflow and identify the last successful task. Prepare deployment instructions in M7, but require explicit approval of the concrete deployment before making the application public.
 
 Validation commands: `npm run lint`, `npm run typecheck`, `npm test`, `npm run validate:content`, `npm run build`, then `npm run test:e2e`. Browser tests require a free port 3000 and Chromium (see README). Keep command exit statuses intact; report failures, skipped checks and unavailable checks accurately.
 

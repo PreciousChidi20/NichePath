@@ -75,6 +75,16 @@ export const contentSchema = z
             topicId: id,
             title: text,
             description: text,
+            overview: texts,
+            relatedNiches: z.array(
+              z
+                .object({
+                  nicheId: id,
+                  explanation: text,
+                  sourceIds: z.array(id).min(1),
+                })
+                .strict(),
+            ),
             practicalApplications: texts,
             skills: texts,
             activity: z
@@ -147,6 +157,16 @@ export function validateContent(input: unknown): Content {
     if (!topics.get(niche.topicId)?.nicheIds.includes(niche.id))
       problems.push(`${niche.id}: missing owning topic reference`);
     checkSources(niche.sourceIds, niche.id);
+    const relatedIds = niche.relatedNiches.map((relation) => relation.nicheId);
+    if (new Set(relatedIds).size !== relatedIds.length)
+      problems.push(`${niche.id}: duplicate related niches`);
+    for (const relation of niche.relatedNiches) {
+      if (!niches.has(relation.nicheId))
+        problems.push(`${niche.id}: unknown related niche ${relation.nicheId}`);
+      if (relation.nicheId === niche.id)
+        problems.push(`${niche.id}: related niche cannot link to itself`);
+      checkSources(relation.sourceIds, niche.id);
+    }
     if (
       !content.concepts.some((concept) =>
         concept.connections.some(
@@ -157,6 +177,11 @@ export function validateContent(input: unknown): Content {
       problems.push(`${niche.id}: needs an interest connection`);
   }
   for (const concept of content.concepts) {
+    const connectionIds = concept.connections.map(
+      (connection) => connection.nicheId,
+    );
+    if (new Set(connectionIds).size !== connectionIds.length)
+      problems.push(`${concept.id}: duplicate niche connections`);
     if (topics.get(concept.topicId)?.status !== "starter")
       problems.push(`${concept.id}: invalid topic`);
     for (const connection of concept.connections) {

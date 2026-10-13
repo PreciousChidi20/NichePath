@@ -10,6 +10,10 @@ Milestone 2 supports learning input and deterministic discovery across Health Sy
 
 Read `AGENTS.md` before contributing. It records project constraints and the required milestone, validation and PR workflow.
 
+Milestone 3 adds fuller Health Systems niche overviews, explicit concept connections, and curated related-interest navigation with explanations and review-required source references. Topic browsing includes adaptive counts, invalid-concept fallback and no-content states. Existing discovery, activities and pathways are preserved.
+
+See `docs/IMPLEMENTATION_PLAN.md` for the complete M3–M7 roadmap and `docs/PROGRESS.md` for the current checkpoint, checks, delivery status and exact resume instruction. Implement dependent milestones only after their preceding PR is merged into the approved base.
+
 ## Run locally
 
 Use Node.js 24 (tested with 24.19.0) and npm. Work in the existing checkout; no separate worktree is needed.
