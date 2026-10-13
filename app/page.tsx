@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { content } from "@/lib/content";
 import { DiscoveryForm } from "@/components/discovery-form";
+import { TopicShortcuts } from "@/components/topic-shortcuts";
 
 export default function Home() {
   return (
@@ -50,30 +51,13 @@ export default function Home() {
       </div>
       <section className="mt-12" aria-labelledby="subjects-title">
         <div className="eyebrow">The bigger picture</div>
-        <h2 id="subjects-title">Five subjects. One place to begin.</h2>
+        <h2 id="subjects-title">Five subjects. Find your starting point.</h2>
         <p className="muted">
-          Health Systems is available now. The remaining subject areas are
-          planned.
+          Discover any of these subjects. Health Systems has starter niche
+          guidance; the other four have topic overviews, with detailed guidance
+          still planned.
         </p>
-        <div className="subject-grid">
-          {content.topics.map((topic) =>
-            topic.status === "starter" ? (
-              <Link
-                key={topic.id}
-                className="subject-card available"
-                href={`/topics/${topic.id}`}
-              >
-                <span>{topic.title}</span>
-                <span className="text-sm">Explore starter →</span>
-              </Link>
-            ) : (
-              <div className="subject-card" key={topic.id}>
-                <span>{topic.title}</span>
-                <span className="text-sm muted">Planned</span>
-              </div>
-            ),
-          )}
-        </div>
+        <TopicShortcuts topics={content.topics} />
       </section>
       <div className="review-notice mt-10">
         <strong>Educational starter · content review required</strong>

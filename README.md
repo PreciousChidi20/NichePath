@@ -2,9 +2,13 @@
 
 A standalone learning companion that helps students connect academic topics to specific interests, practical activities and actionable next steps. Initial case study: online, self-directed MPH study. Built for OpenCodex Hackathon Track 3: Guidance, Pathways & Opportunity.
 
-## Milestone 1
+## Implemented milestones
 
-Next.js App Router, TypeScript, Tailwind CSS and version-controlled JSON. Health Systems is the only available subject, with starter niches for leadership and governance, financing, and workforce. Six curated concepts connect questions and interests to these domains. Epidemiology, Biostatistics, Health Policy and Health Promotion are explicitly planned, not implemented.
+Next.js App Router, TypeScript, Tailwind CSS and version-controlled JSON. Milestone 1 established Health Systems starter niches for leadership and governance, financing, and workforce, with six curated concept-to-interest connections.
+
+Milestone 2 supports learning input and deterministic discovery across Health Systems, Epidemiology, Biostatistics, Health Policy and Health Promotion. Enter a topic, question or permitted excerpt, then explicitly confirm a suggested subject. All five subjects also have direct shortcuts. Health Systems retains its complete starter exploration journey; the other four routes are clearly labelled topic overviews with detailed guidance pending. Their niche content is not implemented.
+
+Read `AGENTS.md` before contributing. It records project constraints and the required milestone, validation and PR workflow.
 
 ## Run locally
 
@@ -27,6 +31,7 @@ The repository's `.npmrc` directs npm's cache to `/tmp/nichepath-npm-cache`, whi
 ## Validation
 
 ```sh
+npm run lint
 npm run validate:content
 npm test
 npm run typecheck
@@ -34,7 +39,9 @@ npm run build
 npm run test:e2e
 ```
 
-Browser tests start a fresh production server automatically; run the build first and stop any server on port 3000 before testing. They use `/usr/bin/chromium`, or a browser executable supplied through `CHROMIUM_PATH`. Tests run at desktop and 360px mobile sizes. They check all three niche journeys, matching and unsupported states, invalid routes, keyboard entry, layout overflow, absence of excerpt transmission, and empty web storage.
+Browser tests start a fresh production server automatically; run the build first and stop any server on port 3000 before testing. They use `/usr/bin/chromium`, or a browser executable supplied through `CHROMIUM_PATH`. Tests run at desktop and 360px mobile sizes. They cover all five subject confirmation and shortcut routes, the three existing niche journeys, ambiguous/empty/unsupported states, character limits, keyboard interaction, layout overflow, and privacy checks including requests, cookies, web storage, IndexedDB, Cache Storage and input reset on reload.
+
+ESLint uses Next.js Core Web Vitals and TypeScript rules with zero warnings allowed. The additional packages are development tooling only; no runtime dependency was added for Milestone 2.
 
 ## Content and source status
 

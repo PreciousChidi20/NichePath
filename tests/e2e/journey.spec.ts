@@ -13,7 +13,7 @@ test("input to interest to actionable financing guidance, with no excerpt transm
       unexpected.push(request.url());
   });
   await page
-    .getByLabel("Topic or permitted coursework excerpt")
+    .getByLabel("Topic, question or permitted coursework excerpt")
     .fill(submitted);
   await page.getByRole("button", { name: "Find connections" }).click();
   await expect(
@@ -67,7 +67,7 @@ test("input to interest to actionable financing guidance, with no excerpt transm
   expect(stored).toEqual({ local: [], session: [] });
   await page.getByRole("link", { name: "NichePath home" }).click();
   await expect(
-    page.getByLabel("Topic or permitted coursework excerpt"),
+    page.getByLabel("Topic, question or permitted coursework excerpt"),
   ).toHaveValue("");
 });
 
@@ -75,11 +75,13 @@ test("handles unsupported, empty, planned and ambiguous input explicitly", async
   page,
 }) => {
   await page.goto("/");
-  const input = page.getByLabel("Topic or permitted coursework excerpt");
+  const input = page.getByLabel(
+    "Topic, question or permitted coursework excerpt",
+  );
   const submit = page.getByRole("button", { name: "Find connections" });
   await submit.click();
   await expect(
-    page.getByText("Enter a topic or choose Health Systems below."),
+    page.getByRole("heading", { name: "Start with a topic or question" }),
   ).toBeVisible();
   await input.fill("marine biology");
   await submit.click();
@@ -89,7 +91,9 @@ test("handles unsupported, empty, planned and ambiguous input explicitly", async
   await input.fill("biostatistics");
   await submit.click();
   await expect(
-    page.getByText(/recognised, but guidance is planned/),
+    page.getByText(
+      /Topic overview available; detailed niche guidance is pending/,
+    ),
   ).toBeVisible();
   await input.fill("epidemiology and health systems");
   await submit.click();
@@ -150,7 +154,9 @@ test("keyboard entry works and unavailable routes return a clear 404", async ({
   await expect(
     page.getByRole("link", { name: "Skip to content" }),
   ).toBeFocused();
-  await page.getByLabel("Topic or permitted coursework excerpt").focus();
+  await page
+    .getByLabel("Topic, question or permitted coursework excerpt")
+    .focus();
   await page.keyboard.type("workforce");
   await page.keyboard.press("Tab");
   await page.keyboard.press("Enter");
@@ -159,7 +165,6 @@ test("keyboard entry works and unavailable routes return a clear 404", async ({
   ).toBeVisible();
   for (const route of [
     "/topics/unknown",
-    "/topics/epidemiology",
     "/topics/health-policy/niches/health-financing",
     "/topics/health-systems/niches/unknown",
   ]) {
