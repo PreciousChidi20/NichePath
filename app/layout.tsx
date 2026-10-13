@@ -38,7 +38,7 @@ export default function RootLayout({
         </main>
         <footer className="shell site-footer">
           <p>Made for curiosity. Built for your next small step.</p>
-          <p>Milestone 2 · Curated discovery · No AI or LMS connection</p>
+          <p>Curated discovery & exploration · No AI or LMS connection</p>
         </footer>
       </body>
     </html>

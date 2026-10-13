@@ -417,6 +417,23 @@
     grid-template-columns: 1.65fr 1fr;
     gap: 24px;
   }
+  .relationship-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    list-style: none;
+    padding: 0;
+    gap: 18px;
+  }
+  .relationship-card {
+    background: #f6f7f0;
+    border: 1px solid #ccd8cc;
+    padding: 18px;
+    border-radius: 12px;
+    overflow-wrap: anywhere;
+  }
+  .relationship-card .card-link {
+    padding-top: 0;
+  }
   .content-list {
     padding-left: 22px;
     margin: 0;
@@ -525,6 +542,9 @@
     }
   }
   @media (max-width: 540px) {
+    .relationship-grid {
+      grid-template-columns: 1fr;
+    }
     .shell {
       padding-left: 18px;
       padding-right: 18px;

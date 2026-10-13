@@ -22,6 +22,9 @@ export function TopicExplorer({
       : undefined,
   );
   const selected = concepts.find((concept) => concept.id === selectedId);
+  const invalidInitialConcept =
+    !!initialConceptId &&
+    !concepts.some((concept) => concept.id === initialConceptId);
   const visibleNiches = selected
     ? niches.filter((niche) =>
         selected.connections.some(
@@ -38,6 +41,18 @@ export function TopicExplorer({
           Choose a concept to see a curated connection to a more specific
           interest and a professional domain.
         </p>
+        {invalidInitialConcept && !selected && (
+          <p className="feedback mt-4">
+            That concept is not available in this topic. Showing all curated
+            niches instead.
+          </p>
+        )}
+        {!concepts.length && (
+          <p className="feedback mt-4">
+            No concept connections have been curated for this topic yet. You can
+            browse available niches below.
+          </p>
+        )}
         <div className="concept-grid">
           {concepts.map((concept) => (
             <button
@@ -61,7 +76,7 @@ export function TopicExplorer({
           className="text-button mt-5"
           onClick={() => setSelectedId(undefined)}
         >
-          Show all three niches
+          Show all niches
         </button>
       </section>
       <section className="mt-10" aria-labelledby="connections-title">
@@ -69,12 +84,25 @@ export function TopicExplorer({
         <h2 id="connections-title">
           {selected
             ? `Connections from ${selected.title.toLowerCase()}`
-            : "Three directions to explore"}
+            : "Directions to explore"}
         </h2>
         <p className="muted mb-6">
           These are exploratory connections, not a career assessment or a
           ranking of your interests.
         </p>
+        <p className="text-sm muted mb-5" role="status">
+          Showing {visibleNiches.length} of {niches.length} niches
+        </p>
+        {!visibleNiches.length && (
+          <div className="feedback">
+            <h3>No curated niches to show</h3>
+            <p>
+              This view has no available niche connections yet.{" "}
+              <Link href="/">Choose another supported topic</Link>, or clear
+              your concept selection.
+            </p>
+          </div>
+        )}
         <div className="niche-grid" aria-live="polite">
           {visibleNiches.map((niche, index) => {
             const connection = selected?.connections.find(

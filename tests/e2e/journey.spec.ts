@@ -42,10 +42,12 @@ test("input to interest to actionable financing guidance, with no excerpt transm
       page.getByRole("heading", { name, exact: true }),
     ).toBeVisible();
   await expect(
-    page.getByText("Source review required", { exact: true }),
+    page
+      .getByRole("region", { name: "Sources to review" })
+      .getByText("Source review required", { exact: true }),
   ).toBeVisible();
   await expect(
-    page.getByRole("link", {
+    page.getByRole("region", { name: "Sources to review" }).getByRole("link", {
       name: /World Health Organization: Health financing/,
     }),
   ).toHaveAttribute(
@@ -129,7 +131,7 @@ test("all niches are complete and mobile layouts do not overflow", async ({
   await expect(
     page.getByRole("link", { name: "Explore this niche" }),
   ).toHaveCount(1);
-  await page.getByRole("button", { name: "Show all three niches" }).click();
+  await page.getByRole("button", { name: "Show all niches" }).click();
   await expect(
     page.getByRole("link", { name: "Explore this niche" }),
   ).toHaveCount(3);
