@@ -1,0 +1,275 @@
+{
+  "label": "Health Systems · starter dataset",
+  "disclaimer": "Illustrative categories and learning activities, not an official university curriculum. Educational exploration only; pathways are examples, not eligibility advice or employment promises. Starter guidance and linked sources require review before authoritative use.",
+  "topics": [
+    {
+      "id": "health-systems",
+      "title": "Health Systems",
+      "summary": "Explore how people, institutions and resources work together to deliver health services. Start with a concept that makes you curious.",
+      "aliases": ["health systems", "health system"],
+      "status": "starter",
+      "nicheIds": [
+        "leadership-governance",
+        "health-financing",
+        "health-workforce"
+      ]
+    },
+    {
+      "id": "epidemiology",
+      "title": "Epidemiology",
+      "summary": "Planned subject area. Guidance is not available in this milestone.",
+      "aliases": ["epidemiology", "epidemiological"],
+      "status": "planned",
+      "nicheIds": []
+    },
+    {
+      "id": "biostatistics",
+      "title": "Biostatistics",
+      "summary": "Planned subject area. Guidance is not available in this milestone.",
+      "aliases": ["biostatistics", "biostatistical"],
+      "status": "planned",
+      "nicheIds": []
+    },
+    {
+      "id": "health-policy",
+      "title": "Health Policy",
+      "summary": "Planned subject area. Guidance is not available in this milestone.",
+      "aliases": ["health policy"],
+      "status": "planned",
+      "nicheIds": []
+    },
+    {
+      "id": "health-promotion",
+      "title": "Health Promotion",
+      "summary": "Planned subject area. Guidance is not available in this milestone.",
+      "aliases": ["health promotion"],
+      "status": "planned",
+      "nicheIds": []
+    }
+  ],
+  "niches": [
+    {
+      "id": "leadership-governance",
+      "topicId": "health-systems",
+      "title": "Health leadership and governance",
+      "description": "Explore how health organisations set direction, make decisions and remain accountable to the people they serve.",
+      "practicalApplications": [
+        "Mapping who makes decisions about a local health service and who can hold those decision-makers accountable.",
+        "Considering how community voices can inform service priorities."
+      ],
+      "skills": [
+        "Stakeholder mapping",
+        "Clear policy communication",
+        "Comparing accountability arrangements"
+      ],
+      "activity": {
+        "title": "Map a service decision",
+        "objective": "Connect a governance concept to a concrete decision and the people affected.",
+        "estimatedMinutes": 30,
+        "instructions": [
+          "Choose a hypothetical decision, such as changing a clinic’s opening hours.",
+          "List five stakeholders and identify who decides, who advises and who is affected.",
+          "Sketch a simple decision map and propose one way patients could give feedback."
+        ],
+        "expectedOutput": "A one-page stakeholder map with a short explanation of one accountability gap."
+      },
+      "nextStep": "Read the linked WHO governance overview, then revise your map with one question about participation or accountability.",
+      "illustrativePathways": [
+        "Further study in health systems management or public administration",
+        "Exploring health programme coordination or policy implementation work"
+      ],
+      "sourceIds": ["who-governance"]
+    },
+    {
+      "id": "health-financing",
+      "topicId": "health-systems",
+      "title": "Health financing",
+      "description": "Explore how money is raised, pooled and used to pay for health services, and how these arrangements relate to access and financial protection.",
+      "practicalApplications": [
+        "Comparing how a tax-funded scheme and a health insurance arrangement collect funds and pay providers.",
+        "Exploring risk pooling: sharing financial risk across a group rather than leaving each person to bear their own healthcare costs. Health insurance can be one pooling arrangement; pooling is broader than insurance. These connections require source review."
+      ],
+      "skills": [
+        "Drawing financing flows",
+        "Comparing policy trade-offs",
+        "Interpreting basic expenditure information"
+      ],
+      "activity": {
+        "title": "Follow the money",
+        "objective": "Distinguish collection, pooling and purchasing in two hypothetical arrangements.",
+        "estimatedMinutes": 35,
+        "instructions": [
+          "Draw a flow for a hypothetical tax-funded service: people and taxes, a pooled public budget, then payments to providers.",
+          "Draw a second flow for a hypothetical insurance scheme: member contributions, an insurance pool, then payments to providers.",
+          "Write two questions about who is included and what costs people still pay. Do not calculate premiums or recommend an insurance product."
+        ],
+        "expectedOutput": "Two labelled financing-flow diagrams and two questions about coverage or financial protection."
+      },
+      "nextStep": "Check the WHO financing overview for collection, pooling and purchasing, then annotate one limitation of each hypothetical diagram.",
+      "illustrativePathways": [
+        "Further study in health economics or health financing policy",
+        "Exploring health financing analysis, insurance policy or programme budgeting domains"
+      ],
+      "sourceIds": ["who-financing"]
+    },
+    {
+      "id": "health-workforce",
+      "topicId": "health-systems",
+      "title": "Health workforce",
+      "description": "Explore how health workers are educated, deployed, supported and retained to meet population needs.",
+      "practicalApplications": [
+        "Considering why a district may have enough workers overall but unequal distribution between facilities.",
+        "Exploring how working conditions and support might affect retention in underserved areas."
+      ],
+      "skills": [
+        "Reading workforce indicators",
+        "Needs and capacity mapping",
+        "Comparing workforce policy options"
+      ],
+      "activity": {
+        "title": "Explore a staffing gap",
+        "objective": "Connect workforce distribution to access using a small fictional scenario.",
+        "estimatedMinutes": 30,
+        "instructions": [
+          "Imagine two equally populated districts with four clinics each. District A has 40 health workers; district B has 16.",
+          "Calculate workers per clinic as a simple comparison. State that equal populations and clinic counts do not imply equal health needs.",
+          "List two missing pieces of information and propose one question about recruitment, deployment or retention."
+        ],
+        "expectedOutput": "A short comparison with two limitations and one workforce planning question."
+      },
+      "nextStep": "Read the WHO workforce overview, then add one consideration about education, distribution or retention to your scenario.",
+      "illustrativePathways": [
+        "Further study in health workforce planning or health services research",
+        "Exploring workforce analysis, training coordination or health service management domains"
+      ],
+      "sourceIds": ["who-workforce"]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "accountability",
+      "topicId": "health-systems",
+      "title": "Accountability",
+      "aliases": ["accountability", "governance", "leadership"],
+      "interestPrompt": "Who makes decisions, and how are they held accountable?",
+      "connections": [
+        {
+          "nicheId": "leadership-governance",
+          "explanation": "An interest in accountability connects to how health organisations assign responsibility and explain decisions.",
+          "sourceIds": ["who-governance"]
+        }
+      ]
+    },
+    {
+      "id": "participation",
+      "topicId": "health-systems",
+      "title": "Community participation",
+      "aliases": [
+        "community participation",
+        "stakeholder engagement",
+        "patient voice"
+      ],
+      "interestPrompt": "How can communities help shape a service?",
+      "connections": [
+        {
+          "nicheId": "leadership-governance",
+          "explanation": "An interest in participation connects to stakeholder engagement and whose views inform service priorities.",
+          "sourceIds": ["who-governance"]
+        }
+      ]
+    },
+    {
+      "id": "risk-pooling",
+      "topicId": "health-systems",
+      "title": "Risk pooling and insurance",
+      "aliases": ["risk pooling", "pooling", "health insurance", "insurance"],
+      "interestPrompt": "How can people share the financial risk of healthcare?",
+      "connections": [
+        {
+          "nicheId": "health-financing",
+          "explanation": "An interest in risk sharing connects to pooled financing arrangements, including health insurance where applicable. Insurance and pooling are not interchangeable terms.",
+          "sourceIds": ["who-financing"]
+        }
+      ]
+    },
+    {
+      "id": "financial-protection",
+      "topicId": "health-systems",
+      "title": "Financial protection",
+      "aliases": ["financial protection", "out of pocket", "health financing"],
+      "interestPrompt": "What happens when healthcare costs are hard to afford?",
+      "connections": [
+        {
+          "nicheId": "health-financing",
+          "explanation": "An interest in affordability connects to how financing arrangements affect what people pay when using care.",
+          "sourceIds": ["who-financing"]
+        }
+      ]
+    },
+    {
+      "id": "workforce-distribution",
+      "topicId": "health-systems",
+      "title": "Workforce distribution",
+      "aliases": [
+        "health workforce",
+        "workforce",
+        "staffing",
+        "workforce distribution"
+      ],
+      "interestPrompt": "Why are health workers unevenly distributed?",
+      "connections": [
+        {
+          "nicheId": "health-workforce",
+          "explanation": "An interest in service capacity connects to workforce planning and the distribution of health workers.",
+          "sourceIds": ["who-workforce"]
+        }
+      ]
+    },
+    {
+      "id": "retention",
+      "topicId": "health-systems",
+      "title": "Supporting and retaining workers",
+      "aliases": ["retention", "health worker retention", "working conditions"],
+      "interestPrompt": "What helps health workers stay and do their work well?",
+      "connections": [
+        {
+          "nicheId": "health-workforce",
+          "explanation": "An interest in working conditions connects to how health services support and retain their workforce.",
+          "sourceIds": ["who-workforce"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "who-governance",
+      "title": "Health systems governance",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/health-topics/health-systems-governance",
+      "supports": "Review the governance overview against the leadership, accountability and decision-making connections.",
+      "verification": "review-required",
+      "reviewedOn": null,
+      "reviewNote": "Source page could not be accessed in this environment (network proxy returned 403). Link availability and support for the associated guidance require manual review. No quotations or academic citations are claimed."
+    },
+    {
+      "id": "who-financing",
+      "title": "Health financing",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/health-topics/health-financing",
+      "supports": "Review financing guidance and the connections to revenue collection, pooling, purchasing and health insurance.",
+      "verification": "review-required",
+      "reviewedOn": null,
+      "reviewNote": "Source page could not be accessed in this environment (network proxy returned 403). Link availability and support for the associated guidance require manual review. No quotations or academic citations are claimed."
+    },
+    {
+      "id": "who-workforce",
+      "title": "Health workforce",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/health-topics/health-workforce",
+      "supports": "Review workforce planning, distribution, education and retention connections.",
+      "verification": "review-required",
+      "reviewedOn": null,
+      "reviewNote": "Source page could not be accessed in this environment (network proxy returned 403). Link availability and support for the associated guidance require manual review. No quotations or academic citations are claimed."
+    }
+  ]
+}
