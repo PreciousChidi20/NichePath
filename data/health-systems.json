@@ -6,7 +6,12 @@
       "id": "health-systems",
       "title": "Health Systems",
       "summary": "Explore how people, institutions and resources work together to deliver health services. Start with a concept that makes you curious.",
-      "aliases": ["health systems", "health system"],
+      "aliases": [
+        "health systems",
+        "health system",
+        "health services organisation",
+        "health services organization"
+      ],
       "status": "starter",
       "nicheIds": [
         "leadership-governance",
@@ -17,32 +22,55 @@
     {
       "id": "epidemiology",
       "title": "Epidemiology",
-      "summary": "Planned subject area. Guidance is not available in this milestone.",
-      "aliases": ["epidemiology", "epidemiological"],
+      "summary": "Supported for topic discovery. Detailed curated niche guidance is planned for a later milestone.",
+      "aliases": [
+        "epidemiology",
+        "epidemiological",
+        "disease surveillance",
+        "outbreak investigation",
+        "disease distribution"
+      ],
       "status": "planned",
       "nicheIds": []
     },
     {
       "id": "biostatistics",
       "title": "Biostatistics",
-      "summary": "Planned subject area. Guidance is not available in this milestone.",
-      "aliases": ["biostatistics", "biostatistical"],
+      "summary": "Supported for topic discovery. Detailed curated niche guidance is planned for a later milestone.",
+      "aliases": [
+        "biostatistics",
+        "biostatistical",
+        "statistical inference",
+        "confidence intervals",
+        "confidence interval",
+        "regression analysis"
+      ],
       "status": "planned",
       "nicheIds": []
     },
     {
       "id": "health-policy",
       "title": "Health Policy",
-      "summary": "Planned subject area. Guidance is not available in this milestone.",
-      "aliases": ["health policy"],
+      "summary": "Supported for topic discovery. Detailed curated niche guidance is planned for a later milestone.",
+      "aliases": [
+        "health policy",
+        "health policies",
+        "policy analysis",
+        "public health legislation"
+      ],
       "status": "planned",
       "nicheIds": []
     },
     {
       "id": "health-promotion",
       "title": "Health Promotion",
-      "summary": "Planned subject area. Guidance is not available in this milestone.",
-      "aliases": ["health promotion"],
+      "summary": "Supported for topic discovery. Detailed curated niche guidance is planned for a later milestone.",
+      "aliases": [
+        "health promotion",
+        "health education",
+        "behaviour change",
+        "behavior change"
+      ],
       "status": "planned",
       "nicheIds": []
     }

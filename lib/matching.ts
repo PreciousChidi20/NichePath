@@ -27,8 +27,9 @@ export function matchTopics(input: string, data: Content): MatchResult {
           concept.aliases.some((alias) => contains(normalized, alias)),
       )
       .map((concept) => concept.id);
-    return topic.aliases.some((alias) => contains(normalized, alias)) ||
-      conceptIds.length
+    return [topic.title, ...topic.aliases].some((alias) =>
+      contains(normalized, alias),
+    ) || conceptIds.length
       ? [{ topicId: topic.id, conceptIds }]
       : [];
   });
