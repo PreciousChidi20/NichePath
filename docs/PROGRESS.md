@@ -2,7 +2,7 @@
 
 ## Current checkpoint
 
-Repository: `PreciousChidi20/NichePath`. Approved base: main at `d7103dd` (verified 14 October 2026). Milestones 1–5 are merged. M6 is complete, validated and pushed for review on `feat/milestone-6-quality-assurance`. M7 has not started.
+Repository: `PreciousChidi20/NichePath`. Approved base: main at `cddc069` (verified 14 October 2026). Milestones 1–6 are merged; PR #7 and ancestry include M6 implementation `f91ac78` and delivery `0cec5c5`. M7 deployment/demo preparation is complete and validated; Git delivery is pending. No public deployment is authorised or performed.
 
 Consult [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for scope and acceptance criteria. Record actual evidence here; a planned command or saved description is not proof of success.
 
@@ -13,8 +13,8 @@ Consult [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for scope and acceptanc
 | 3 — Niche exploration | Merged                          | `feat/milestone-3-niche-exploration`         | [#3](https://github.com/PreciousChidi20/NichePath/pull/3) | Main history contains `38e4077` and `4e0268f`; merged at `357450c`.                      |
 | 4 — Skills/pathways   | Merged                          | `feat/milestone-4-practical-pathways`        | [#5](https://github.com/PreciousChidi20/NichePath/pull/5) | Main contains `8fc7c32` and `a33460a`; merge `9192fb5`.                                  |
 | 5 — Content expansion | Merged                          | `feat/milestone-5-content-expansion`         | [#6](https://github.com/PreciousChidi20/NichePath/pull/6) | Main includes `f15966c` and `6987c0a`; merge `d7103dd`.                                  |
-| 6 — QA                | Complete; awaiting review/merge | `feat/milestone-6-quality-assurance`         | Not created                                               | Checks passed; pushed. PR API returned Forbidden; manual creation/review/merge required. |
-| 7 — Deployment/demo   | Not started                     | `feat/milestone-7-deployment-demo` (planned) | Not created                                               | Requires M6 merged; public deployment needs approval.                                    |
+| 6 — QA                | Merged | `feat/milestone-6-quality-assurance` | [#7](https://github.com/PreciousChidi20/NichePath/pull/7) | Main contains `f91ac78`/`0cec5c5`; merge `cddc069`. |
+| 7 — Deployment/demo | Prepared; delivery pending | `feat/milestone-7-deployment-demo` | Not created | M6 prerequisite verified; public publication remains unapproved. |
 
 ## Milestone 3 task ledger
 
@@ -147,9 +147,26 @@ Lint: passed, zero warnings/errors. TypeScript/content validation/build: passed.
 - Copy-ready title/description, including AI Collaboration: [PULL_REQUEST_MILESTONE_6.md](PULL_REQUEST_MILESTONE_6.md).
 - [Create the PR manually](https://github.com/PreciousChidi20/NichePath/compare/main...feat/milestone-6-quality-assurance?expand=1), using base main and this feature branch. Paste the prepared title/description, review and merge when satisfied. This comparison link is not a created PR URL.
 
+## Milestone 7 task ledger
+
+- [x] M7.1 Prepare native Next.js Vercel configuration and tested Node 24 major; no new runtime dependencies, secrets or integrations.
+- [x] M7.2 Rewrite README as the implemented MVP; add exact local setup, validation and deployment instructions.
+- [x] M7.3 Prepare three-minute demo script/checklist; exact production sequence rehearsed successfully at 1280px and 360px.
+- [x] M7.4 Inspect deployment access metadata: no exposed deployment tool, Vercel CLI, linked project or VERCEL_TOKEN/ORG_ID/PROJECT_ID variables. No secret values inspected. Provide manual Vercel steps.
+- [ ] M7.5 Public deployment/verification: intentionally not performed; requires explicit publication approval.
+- [ ] M7.6 Complete checks and collaboration/delivery records, commit/push and attempt PR.
+
+## Milestone 7 verification
+
+Clean frozen-lockfile `npm ci` passed on Node 24.19.0/npm 11.9.0. Lint passed with zero warnings; TypeScript passed; 33 unit/component tests passed with no failures/skips; content validation and production build passed (5 topics, 11 niches, 23 concepts, 7 review-required sources). All 44 browser tests passed (45.9s), with no failures/skips. The exact production demo sequence passed at 1280px and 360px: risk-pooling input, learner confirmation, financing guidance, copy/review notes, related governance, reset, ambiguity and unsupported input. Upstream ESLint deprecation warning remains. No Vercel/cloud/public-URL check is claimed.
+
+## Milestone 7 delivery
+
+Branch created from approved `origin/main` at `cddc069`: `feat/milestone-7-deployment-demo`. Commit, push and PR are pending. No automatic merge or public deployment has occurred.
+
 ## Merge boundary and next action
 
-M7 requires M6 merged into approved main. Stop after this delivery until review/merge. Public deployment still requires explicit approval of the concrete prepared configuration. No M7 implementation or public deployment has begun.
+M6 prerequisite is now verified merged. Prepare M7 for review and stop after delivery. The owner must review/merge; any public publication requires explicit approval of the concrete account/settings in DEPLOYMENT.md. No further feature milestone is approved.
 
 ## Known limitations
 
@@ -160,4 +177,4 @@ M7 requires M6 merged into approved main. Stop after this delivery until review/
 
 ## Resume instruction
 
-M6 implementation, validation and branch delivery are complete. Last successful implementation task: M6.5. Create/review/merge the M6 PR before proceeding; preserve completed work. Resume: “Read AGENTS.md, docs/IMPLEMENTATION_PLAN.md and docs/PROGRESS.md; verify M6 is merged into origin/main, then implement M7 on feat/milestone-7-deployment-demo. Preserve completed work. Prepare deployment and demo instructions, but do not merge or deploy publicly automatically.”
+Complete only unfinished M7 checks/delivery recorded above. Preserve completed work. After M7 delivery, review and merge its PR manually; do not repeat M1–M6 or deploy publicly. For a future deployment task, read DEPLOYMENT.md, verify M7 merged into main, confirm target account/configuration and explicit publication approval before deployment or public smoke tests.

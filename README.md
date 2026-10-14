@@ -1,78 +1,82 @@
 # NichePath
 
-A standalone learning companion that helps students connect academic topics to specific interests, practical activities and actionable next steps. Initial case study: online, self-directed MPH study. Built for OpenCodex Hackathon Track 3: Guidance, Pathways & Opportunity.
+A standalone learning companion for online MPH learners, built for the OpenCodex Hackathon **Guidance, Pathways & Opportunity** track. Connect a broad academic interest to a specific niche, practical applications, skills, an achievable activity and a concrete next step.
 
-## Implemented milestones
+## Features
 
-Next.js App Router, TypeScript, Tailwind CSS and version-controlled JSON. Milestone 1 established Health Systems starter niches for leadership and governance, financing, and workforce, with six curated concept-to-interest connections.
+- Browser-only topic/question/permitted-excerpt input with a visible character limit, curated word-aware matching and learner confirmation.
+- Five subjects: Health Systems, Epidemiology, Biostatistics, Health Policy and Health Promotion; 11 starter niches and 23 concept connections.
+- Explained skills, original hypothetical activities, related-interest navigation and illustrative academic/professional domains.
+- Copyable curated next-step summaries with keyboard-accessible selection fallback.
+- Responsive layouts, including 360px screens, accessible feedback and helpful unsupported/invalid states.
 
-Milestone 2 supports learning input and deterministic discovery across Health Systems, Epidemiology, Biostatistics, Health Policy and Health Promotion. Enter a topic, question or permitted excerpt, then explicitly confirm a suggested subject. All five subjects also have direct shortcuts. Health Systems retains its complete starter exploration journey; the other four now have their own curated niches as described below.
+Health Systems is the initial case study, including leadership/governance, financing and workforce. This is illustrative guidance, not an official curriculum or a career recommendation service.
 
-Read `AGENTS.md` before contributing. It records project constraints and the required milestone, validation and PR workflow.
+## Setup and local production
 
-Milestone 3 adds fuller Health Systems niche overviews, explicit concept connections, and curated related-interest navigation with explanations and review-required source references. Topic browsing includes adaptive counts, invalid-concept fallback and no-content states. Existing discovery, activities and pathways are preserved.
-
-See `docs/IMPLEMENTATION_PLAN.md` for the complete M3–M7 roadmap and `docs/PROGRESS.md` for the current checkpoint, checks, delivery status and exact resume instruction. Implement dependent milestones only after their preceding PR is merged into the approved base.
-
-Milestone 4 explains skills and their practical connections, adds activity reflection and next-step outputs, distinguishes illustrative academic/professional domains, and maps proposed references to guidance areas. A read-only curated summary can be copied to the device clipboard on explicit request, with a selectable fallback if copying is unavailable. Coursework excerpts are never included. Source verification remains outstanding.
-Milestone 5 expands the curated JSON to 11 niches across all five subjects: three in Health Systems and two in each remaining subject. All include applications, explained skills, original hypothetical activities, next steps, illustrative pathways, concept connections and proposed references. Cross-topic links and resource-allocation connections are available. All seven source destinations returned proxy HTTP 403 during review; [SOURCE_REVIEW.md](docs/SOURCE_REVIEW.md) records the attempts and required manual checks. Source-backed authority is not claimed until associated material has been checked.
-
-## Development with OpenAI Codex
-
-NichePath's owner defined the product concept and requirements. OpenAI Codex assisted with planning, implementation, testing and GitHub preparation. The [collaboration log](docs/CODEX_COLLABORATION.md) records milestone-specific contributions, commit/PR references and evidence limitations. Git author identities are preserved; they do not independently establish AI authorship.
-
-## Run locally
-
-Use Node.js 24 (tested with 24.19.0) and npm. Work in the existing checkout; no separate worktree is needed.
+Use Node.js 24 (tested with 24.19.0), npm and the existing checkout. `.nvmrc` and `package.json` record the Node major. No environment variables, credentials, database or external services are required.
 
 ```sh
+git clone https://github.com/PreciousChidi20/NichePath.git
+cd NichePath
+# If using nvm:
+nvm install
+nvm use
 npm ci
 npm run dev
 ```
 
-Development listens on port 3000. For a production run:
+Stop the development server before starting production:
 
 ```sh
 npm run build
 npm run start
 ```
 
-The repository's `.npmrc` directs npm's cache to `/tmp/nichepath-npm-cache`, which is writable in the cloud environment. Override using `npm --cache <your-cache-path> ci` if needed. No environment variables, credentials, databases or external services are required.
+Both listen on port 3000. The build validates content before compiling. The cloud-compatible `.npmrc` uses `/tmp/nichepath-npm-cache`; override with `npm --cache <your-cache-path> ci` if needed.
 
 ## Validation
 
-Milestone 6 adds automated Axe accessibility scans, keyboard-only navigation and broader privacy checks. `docs/QA_REPORT.md` records the results and limits. Accessibility tooling is development-only; the application has no new runtime dependency. Automated checks complement manual/assistive-technology review rather than certifying accessibility.
-
 ```sh
 npm run lint
-npm run validate:content
-npm test
 npm run typecheck
+npm test
+npm run validate:content
 npm run build
 npm run test:e2e
 ```
 
-Browser tests start a fresh production server automatically; run the build first and stop any server on port 3000 before testing. They use `/usr/bin/chromium`, or a browser executable supplied through `CHROMIUM_PATH`. Tests run at desktop and 360px mobile sizes. They cover all five subject confirmation and shortcut routes, all 11 niche journeys, ambiguous/empty/unsupported states, character limits, keyboard interaction, layout overflow, and privacy checks including requests, cookies, web storage, IndexedDB, Cache Storage and input reset on reload.
+Browser checks require Chromium at `/usr/bin/chromium` or an executable specified by `CHROMIUM_PATH`. If absent, install using the existing Playwright dependency:
 
-ESLint uses Next.js Core Web Vitals and TypeScript rules with zero warnings allowed. The additional packages are development tooling only; no runtime dependency was added for Milestone 2.
+```sh
+npx playwright install chromium
+# Linux may also require system browser libraries:
+npx playwright install-deps chromium
+CHROMIUM_PATH="$(node -e 'process.stdout.write(require("@playwright/test").chromium.executablePath())')" npm run test:e2e
+```
 
-## Content and source status
+The test configuration intentionally uses an explicit executable. Port 3000 must be free: tests launch a fresh production server themselves. Tests cover desktop/360px journeys, matching, clipboard fallback, strict 404s, keyboard interaction, Axe scans and excerpt privacy. See [QA report](docs/QA_REPORT.md) for scope and limits. Automated scans do not certify accessibility. ESLint 9 is retained for the existing Next.js tooling compatibility; npm reports an upstream deprecation warning.
 
-`data/mph-content.json` contains the labelled starter dataset. These are illustrative categories, not an official university curriculum. Activities are original, hypothetical practice exercises; pathways are illustrative, not employment or qualification promises.
+## Deployment and demo
 
-**All starter guidance and sources require editorial review.** Proposed WHO topic pages could not be accessed during implementation: the network proxy returned HTTP 403. URLs are references to review, not verified academic citations. No page quotations, publication details or source-verification dates have been invented. In particular, review the financing connections to health insurance, risk pooling, collection and purchasing against authoritative materials before presenting them as source-backed guidance.
+Vercel is the prepared Next.js deployment target. [Deployment instructions](docs/DEPLOYMENT.md) describe settings, the publication approval boundary, smoke checks and rollback. `vercel.json` preserves native Next.js routing; no static-export or output-directory override is used.
 
-`lib/content-model.ts` defines and validates the typed model. Validation checks fields, HTTPS source URLs, identifiers, topic-niche ownership, concept connections and source references. It runs before every production build. It does **not** establish the accuracy of content or verify source availability. To mark a source verified, first review the page and associated claims, then record its review date and specific review note.
+**This work prepares deployment; it does not establish a live application.** Do not publish or enable automatic public deployments without the owner's explicit approval. The [demo script and rehearsal checklist](docs/HACKATHON_DEMO.md) can be used against a local production build first.
 
-## Privacy and integration boundaries
+## Content and limitations
 
-Submitted text remains in React state on the homepage. Matching is browser-only, using curated phrase aliases with word boundaries. Only known topic and concept identifiers enter navigation URLs. Text is cleared on leaving the homepage or reloading; no excerpts enter persistent storage, logs, analytics or network requests. There is no AI API, authentication, LMS, or remote font loading. Matching identifies possible connections; learners confirm their choice. It does not infer meaning, assess interests or rank careers.
+`data/mph-content.json` is version-controlled starter content. All seven proposed sources and associated claims remain **review-required**: WHO, CDC and NIST link checks were blocked by proxy HTTP 403 in earlier source review. No source quotations, verification dates or academic citations were invented. [Source review](docs/SOURCE_REVIEW.md) lists manual checks, including financing, insurance, risk pooling and resource allocation.
 
-Content access, the typed model, and the pure topic matcher have separate boundaries. Future AI resolution or LMS input can use these boundaries in a later milestone, with a separate privacy design. No integration scaffolding or credentials are added now.
+`lib/content-model.ts` checks required fields, ownership, concept/niche relationships and source references. Structural validation does not verify educational accuracy or external availability. Activities use hypothetical examples; pathways do not guarantee jobs or credentials. Learner feedback, source/editorial review and broader assistive-technology/device testing remain outstanding.
 
-## Next milestone (requires approval)
+## Privacy and future integrations
 
-- Verify authoritative sources and review the starter guidance, including financing and risk pooling.
-- Complete Milestone 6 quality assurance on the expanded dataset.
-- Refine concept connections using learner feedback and perform a fuller accessibility review.
-- Prepare Milestone 7 deployment and demo after quality assurance; public deployment requires approval.
+Submitted text stays in browser memory, clears on reload/leaving the homepage, and is excluded from URLs, storage, logs, network requests and copied summaries. Only curated identifiers enter navigation. Do not submit sensitive, confidential or unauthorised material. Clipboard copying is an explicit user action containing curated guidance only.
+
+Matching uses deterministic aliases and word boundaries, not AI understanding. There is no external AI API, LMS, authentication, database or analytics. Hosting will receive ordinary page requests; never add excerpt logging or analytics to input handling. Typed content, pure matching and UI remain separate for future integrations requiring their own approval and privacy design.
+
+## Development with OpenAI Codex
+
+The owner supplied the product concept and scope. Codex assisted with planning, implementation, verification and review preparation. The [collaboration log](docs/CODEX_COLLABORATION.md) distinguishes session-observed assistance from Git evidence; Git author identity alone does not establish AI authorship. Existing history is preserved.
+
+Before contributing, read [AGENTS.md](AGENTS.md), the [implementation plan](docs/IMPLEMENTATION_PLAN.md) and [progress checkpoint](docs/PROGRESS.md). Milestone branches are reviewed separately; never merge or publish automatically. Remaining improvements beyond this MVP require approval.

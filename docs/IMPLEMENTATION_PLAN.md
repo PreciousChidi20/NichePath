@@ -83,7 +83,7 @@ Branch: `feat/milestone-7-deployment-demo`. Suggested PR title: `docs: prepare N
 | M7.5 Verify deployment when authorised | After successful deployment, test the actual public URL and report evidence. Otherwise explicitly report no live deployment.                                                                                                                  | Public smoke tests only after approval                          |
 | M7.6 Close roadmap                     | Record completed features, checks, Git/PR/deployment state, limitations and future AI/LMS opportunities without implementing them.                                                                                                            | PROGRESS and final report                                       |
 
-Prerequisite: M6 merged. Never claim an application is live based on a local server or a prepared configuration.
+Prerequisite verified: M6 merged into main through PR #7 at `cddc069`. M7 prepares native Next.js/Vercel settings, local production rehearsal and manual publication instructions. Public deployment and public-URL verification remain deliberately unexecuted without explicit approval. See PROGRESS.md for actual checks and delivery. Never claim an application is live based on a local server or a prepared configuration.
 
 ## Standard validation
 
