@@ -4,6 +4,9 @@ import { content, getTopic } from "@/lib/content";
 import { TopicExplorer } from "@/components/topic-explorer";
 import { TopicShortcuts } from "@/components/topic-shortcuts";
 
+// Only version-controlled catalogue routes are valid; new content requires a rebuild.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return content.topics.map((topic) => ({ topicId: topic.id }));
 }

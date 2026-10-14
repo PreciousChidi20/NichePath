@@ -8,6 +8,7 @@ export function NextStepSummary({ summary }: { summary: string }) {
   const textRef = useRef<HTMLTextAreaElement>(null);
   async function copy() {
     setCopying(true);
+    setStatus("Copying your next steps…");
     try {
       if (!navigator.clipboard?.writeText)
         throw new Error("Clipboard unavailable");
