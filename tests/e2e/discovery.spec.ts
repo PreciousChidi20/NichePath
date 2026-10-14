@@ -32,24 +32,28 @@ test("all five subjects support matching, confirmation and direct navigation", a
     await results
       .getByRole("link", { name: `Explore ${title} →`, exact: true })
       .click();
-    await expect(page).toHaveURL(`/topics/${id}`);
+    await expect(page).toHaveURL(new RegExp(`/topics/${id}(?:\\?|$)`));
     await expect(page.getByRole("heading", { level: 1 })).toContainText(title);
-    if (id !== "health-systems") {
-      await expect(
-        page.getByRole("heading", {
-          name: "Detailed guidance is not available yet",
-        }),
-      ).toBeVisible();
-      await expect(
-        page.getByRole("link", { name: "Explore this niche" }),
-      ).toHaveCount(0);
-    }
+    const confirmedConcept = new URL(page.url()).searchParams.get("concept");
+    await expect(page.getByRole("button", { pressed: true })).toHaveCount(
+      confirmedConcept ? 1 : 0,
+    );
+    await expect(
+      page.getByRole("link", { name: "Explore this niche" }),
+    ).toHaveCount(confirmedConcept ? 1 : id === "health-systems" ? 3 : 2);
+    await page.getByRole("button", { name: "Show all niches" }).click();
+    await expect(
+      page.getByRole("link", { name: "Explore this niche" }),
+    ).toHaveCount(id === "health-systems" ? 3 : 2);
     await page.goto("/");
     await page
       .getByRole("list", { name: "Supported topic shortcuts" })
       .getByRole("link", { name: new RegExp(`^${title}`) })
       .click();
-    await expect(page).toHaveURL(`/topics/${id}`);
+    await expect(page).toHaveURL(new RegExp(`/topics/${id}(?:\\?|$)`));
+    await expect(
+      page.getByRole("link", { name: "Explore this niche" }),
+    ).toHaveCount(id === "health-systems" ? 3 : 2);
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= window.innerWidth,
@@ -71,7 +75,7 @@ test("ambiguous results expose all candidates and keyboard confirmation chooses 
   await expect(page).toHaveURL("/");
   await results.getByRole("link", { name: "Explore Biostatistics →" }).focus();
   await page.keyboard.press("Enter");
-  await expect(page).toHaveURL("/topics/biostatistics");
+  await expect(page).toHaveURL(/\/topics\/biostatistics(?:\?|$)/);
 });
 
 test("unsupported input offers all five working shortcuts and updates invalidate stale results", async ({

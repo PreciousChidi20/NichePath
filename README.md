@@ -6,7 +6,7 @@ A standalone learning companion that helps students connect academic topics to s
 
 Next.js App Router, TypeScript, Tailwind CSS and version-controlled JSON. Milestone 1 established Health Systems starter niches for leadership and governance, financing, and workforce, with six curated concept-to-interest connections.
 
-Milestone 2 supports learning input and deterministic discovery across Health Systems, Epidemiology, Biostatistics, Health Policy and Health Promotion. Enter a topic, question or permitted excerpt, then explicitly confirm a suggested subject. All five subjects also have direct shortcuts. Health Systems retains its complete starter exploration journey; the other four routes are clearly labelled topic overviews with detailed guidance pending. Their niche content is not implemented.
+Milestone 2 supports learning input and deterministic discovery across Health Systems, Epidemiology, Biostatistics, Health Policy and Health Promotion. Enter a topic, question or permitted excerpt, then explicitly confirm a suggested subject. All five subjects also have direct shortcuts. Health Systems retains its complete starter exploration journey; the other four now have their own curated niches as described below.
 
 Read `AGENTS.md` before contributing. It records project constraints and the required milestone, validation and PR workflow.
 
@@ -14,7 +14,9 @@ Milestone 3 adds fuller Health Systems niche overviews, explicit concept connect
 
 See `docs/IMPLEMENTATION_PLAN.md` for the complete M3–M7 roadmap and `docs/PROGRESS.md` for the current checkpoint, checks, delivery status and exact resume instruction. Implement dependent milestones only after their preceding PR is merged into the approved base.
 
-Milestone 4 explains skills and their practical connections, adds activity reflection and next-step outputs, distinguishes illustrative academic/professional domains, and maps proposed references to guidance areas. A read-only curated summary can be copied to the device clipboard on explicit request, with a selectable fallback if copying is unavailable. Coursework excerpts are never included. Source verification and expansion to other subjects remain outstanding.
+Milestone 4 explains skills and their practical connections, adds activity reflection and next-step outputs, distinguishes illustrative academic/professional domains, and maps proposed references to guidance areas. A read-only curated summary can be copied to the device clipboard on explicit request, with a selectable fallback if copying is unavailable. Coursework excerpts are never included. Source verification remains outstanding.
+Milestone 5 expands the curated JSON to 11 niches across all five subjects: three in Health Systems and two in each remaining subject. All include applications, explained skills, original hypothetical activities, next steps, illustrative pathways, concept connections and proposed references. Cross-topic links and resource-allocation connections are available. All seven source destinations returned proxy HTTP 403 during review; [SOURCE_REVIEW.md](docs/SOURCE_REVIEW.md) records the attempts and required manual checks. Source-backed authority is not claimed until associated material has been checked.
+
 ## Development with OpenAI Codex
 
 NichePath's owner defined the product concept and requirements. OpenAI Codex assisted with planning, implementation, testing and GitHub preparation. The [collaboration log](docs/CODEX_COLLABORATION.md) records milestone-specific contributions, commit/PR references and evidence limitations. Git author identities are preserved; they do not independently establish AI authorship.
@@ -48,13 +50,13 @@ npm run build
 npm run test:e2e
 ```
 
-Browser tests start a fresh production server automatically; run the build first and stop any server on port 3000 before testing. They use `/usr/bin/chromium`, or a browser executable supplied through `CHROMIUM_PATH`. Tests run at desktop and 360px mobile sizes. They cover all five subject confirmation and shortcut routes, the three existing niche journeys, ambiguous/empty/unsupported states, character limits, keyboard interaction, layout overflow, and privacy checks including requests, cookies, web storage, IndexedDB, Cache Storage and input reset on reload.
+Browser tests start a fresh production server automatically; run the build first and stop any server on port 3000 before testing. They use `/usr/bin/chromium`, or a browser executable supplied through `CHROMIUM_PATH`. Tests run at desktop and 360px mobile sizes. They cover all five subject confirmation and shortcut routes, all 11 niche journeys, ambiguous/empty/unsupported states, character limits, keyboard interaction, layout overflow, and privacy checks including requests, cookies, web storage, IndexedDB, Cache Storage and input reset on reload.
 
 ESLint uses Next.js Core Web Vitals and TypeScript rules with zero warnings allowed. The additional packages are development tooling only; no runtime dependency was added for Milestone 2.
 
 ## Content and source status
 
-`data/health-systems.json` contains the labelled starter dataset. These are illustrative categories, not an official university curriculum. Activities are original, hypothetical practice exercises; pathways are illustrative, not employment or qualification promises.
+`data/mph-content.json` contains the labelled starter dataset. These are illustrative categories, not an official university curriculum. Activities are original, hypothetical practice exercises; pathways are illustrative, not employment or qualification promises.
 
 **All starter guidance and sources require editorial review.** Proposed WHO topic pages could not be accessed during implementation: the network proxy returned HTTP 403. URLs are references to review, not verified academic citations. No page quotations, publication details or source-verification dates have been invented. In particular, review the financing connections to health insurance, risk pooling, collection and purchasing against authoritative materials before presenting them as source-backed guidance.
 
@@ -69,6 +71,6 @@ Content access, the typed model, and the pure topic matcher have separate bounda
 ## Next milestone (requires approval)
 
 - Verify authoritative sources and review the starter guidance, including financing and risk pooling.
-- Expand curated content to the remaining approved MPH subjects.
+- Complete Milestone 6 quality assurance on the expanded dataset.
 - Refine concept connections using learner feedback and perform a fuller accessibility review.
-- Consider optional copyable next steps after the core content is reviewed.
+- Prepare Milestone 7 deployment and demo after quality assurance; public deployment requires approval.

@@ -73,7 +73,7 @@ test("input to interest to actionable financing guidance, with no excerpt transm
   ).toHaveValue("");
 });
 
-test("handles unsupported, empty, planned and ambiguous input explicitly", async ({
+test("handles unsupported, empty, supported and ambiguous input explicitly", async ({
   page,
 }) => {
   await page.goto("/");
@@ -93,9 +93,7 @@ test("handles unsupported, empty, planned and ambiguous input explicitly", async
   await input.fill("biostatistics");
   await submit.click();
   await expect(
-    page.getByText(
-      /Topic overview available; detailed niche guidance is pending/,
-    ),
+    page.getByText(/Starter niche guidance available/),
   ).toBeVisible();
   await input.fill("epidemiology and health systems");
   await submit.click();

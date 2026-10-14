@@ -5,8 +5,8 @@ export default function NotFound() {
       <div className="eyebrow">Outside this starter</div>
       <h1>This path isn’t available yet.</h1>
       <p className="hero-copy">
-        Choose one of the five supported subject overviews. Detailed starter
-        niches are currently available only for Health Systems.
+        Choose one of the five supported subject overviews to explore its
+        curated starter niches. This specific path is not available.
       </p>
       <Link className="button mt-6" href="/topics/health-systems">
         Explore Health Systems →

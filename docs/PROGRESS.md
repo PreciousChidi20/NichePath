@@ -2,19 +2,19 @@
 
 ## Current checkpoint
 
-Repository: `PreciousChidi20/NichePath`. Approved base: `main` at `357450c` (verified 14 October 2026). Milestones 1–3 are merged. Milestone 4 is complete, validated and pushed for review on `feat/milestone-4-practical-pathways`. M5–M7 have not started.
+Repository: `PreciousChidi20/NichePath`. Approved base: `main` at `9192fb5` (verified 14 October 2026). Milestones 1–4 are merged; collaboration documentation is merged via PR #4. Milestone 5 is implemented on `feat/milestone-5-content-expansion`, with validation complete and Git delivery pending. M6–M7 have not started.
 
 Consult [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for scope and acceptance criteria. Record actual evidence here; a planned command or saved description is not proof of success.
 
-| Milestone             | Status                          | Branch                                         | PR                                                        | Evidence/blocker                                                                                   |
-| --------------------- | ------------------------------- | ---------------------------------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| 1 — Foundation        | Merged                          | `feat/nichepath-mvp-milestone-1`               | [#1](https://github.com/PreciousChidi20/NichePath/pull/1) | Main history contains `3dacf05`; Health Systems starter journey present.                           |
-| 2 — Topic discovery   | Merged                          | `feat/milestone-2-topic-discovery`             | [#2](https://github.com/PreciousChidi20/NichePath/pull/2) | Main history contains `579e9c2`; five subject discovery and AGENTS present.                        |
-| 3 — Niche exploration | Merged                          | `feat/milestone-3-niche-exploration`           | [#3](https://github.com/PreciousChidi20/NichePath/pull/3) | Main history contains `38e4077` and `4e0268f`; merged at `357450c`.                                |
-| 4 — Skills/pathways   | Complete; awaiting review/merge | `feat/milestone-4-practical-pathways`          | Not created                                               | M4 checks passed; branch pushed. PR API returned Forbidden; manual creation/review/merge required. |
-| 5 — Content expansion | Not started                     | `feat/milestone-5-content-expansion` (planned) | Not created                                               | Requires M4 merged.                                                                                |
-| 6 — QA                | Not started                     | `feat/milestone-6-quality-assurance` (planned) | Not created                                               | Requires M5 merged.                                                                                |
-| 7 — Deployment/demo   | Not started                     | `feat/milestone-7-deployment-demo` (planned)   | Not created                                               | Requires M6 merged; public deployment needs approval.                                              |
+| Milestone             | Status                        | Branch                                         | PR                                                        | Evidence/blocker                                                                  |
+| --------------------- | ----------------------------- | ---------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| 1 — Foundation        | Merged                        | `feat/nichepath-mvp-milestone-1`               | [#1](https://github.com/PreciousChidi20/NichePath/pull/1) | Main history contains `3dacf05`; Health Systems starter journey present.          |
+| 2 — Topic discovery   | Merged                        | `feat/milestone-2-topic-discovery`             | [#2](https://github.com/PreciousChidi20/NichePath/pull/2) | Main history contains `579e9c2`; five subject discovery and AGENTS present.       |
+| 3 — Niche exploration | Merged                        | `feat/milestone-3-niche-exploration`           | [#3](https://github.com/PreciousChidi20/NichePath/pull/3) | Main history contains `38e4077` and `4e0268f`; merged at `357450c`.               |
+| 4 — Skills/pathways   | Merged                        | `feat/milestone-4-practical-pathways`          | [#5](https://github.com/PreciousChidi20/NichePath/pull/5) | Main contains `8fc7c32` and `a33460a`; merge `9192fb5`.                           |
+| 5 — Content expansion | Implemented; delivery pending | `feat/milestone-5-content-expansion`           | Not created                                               | Checks passed; Git delivery pending. External source verification remains manual. |
+| 6 — QA                | Not started                   | `feat/milestone-6-quality-assurance` (planned) | Not created                                               | Requires M5 merged.                                                               |
+| 7 — Deployment/demo   | Not started                   | `feat/milestone-7-deployment-demo` (planned)   | Not created                                               | Requires M6 merged; public deployment needs approval.                             |
 
 ## Milestone 3 task ledger
 
@@ -70,7 +70,7 @@ Tests cover curated graphs, invalid relationships, rendered empty/error states, 
 - [x] M4.5 Run validation and review scope; no runtime dependencies added.
 - [x] Commit/push, attempt PR creation and record actual delivery.
 
-## Milestone 4 validation evidence
+## Milestone 4 validation evidence (historical)
 
 | Check               | Result                                                 |
 | ------------------- | ------------------------------------------------------ |
@@ -85,7 +85,7 @@ New tests cover explained skills, evidence references/coverage, curated summary 
 
 WHO governance, financing and workforce pages were retried during M4; all returned network proxy HTTP 403. No source was marked verified. Source-backed authority remains an editorial limitation, not a passing test claim. Evidence notes distinguish proposed background references from original practice activities and illustrative pathways.
 
-## Milestone 4 delivery evidence
+## Milestone 4 delivery evidence (historical)
 
 - Repository: `PreciousChidi20/NichePath`; base: `main`.
 - Branch: `feat/milestone-4-practical-pathways`.
@@ -96,17 +96,33 @@ WHO governance, financing and workforce pages were retried during M4; all return
 - Copy-ready title/description: [PULL_REQUEST_MILESTONE_4.md](PULL_REQUEST_MILESTONE_4.md).
 - [Create the PR manually](https://github.com/PreciousChidi20/NichePath/compare/main...feat/milestone-4-practical-pathways?expand=1), with base `main` and the named feature branch. Paste the prepared title/description, create, review and merge when satisfied. This link is a comparison form, not a created PR URL.
 
+## Milestone 5 task ledger
+
+- [x] M5.1 Inspect actual merged M1–M4 code/history and preserve the existing workflows.
+- [x] M5.2 Expand to 11 full niches (Health Systems 3, all other subjects 2), 23 concepts and seven proposed source records.
+- [x] M5.3 Add cross-topic relationships and explicit resource-allocation connections; retain insurance/pooling distinctions.
+- [x] M5.4 Attempt all seven source URLs with TLS verification. Proxy returned 403 for all; record review-required limitations and manual checklist in SOURCE_REVIEW.md.
+- [x] M5.5 Activate all five topic exploration routes, update dataset consumers and preserve discovery/activity/summary privacy regressions.
+- [x] Record final check results.
+- [ ] Commit/push and attempt PR creation; record actual delivery.
+
+## Milestone 5 verification
+
+Functional checks passed: lint (zero warnings/errors), TypeScript, content validation, 33 unit/component tests, production build and 34 desktop/360px browser tests. No final failures/skips. The first browser run had two stale test expectations about focused lists; these were corrected to test focused, cleared and direct-navigation states before the passing rerun. Source accessibility and specific claim support remain unverified; no review date or verified status was fabricated. See [SOURCE_REVIEW.md](SOURCE_REVIEW.md).
+
+Internal content inspection covered distinct niches, complete hypothetical exercises, explicit limitations and relationship references. Original Health Systems activities were preserved. New waiting-time exercise: mean 18, median 13. This is not external editorial sign-off.
+
 ## Merge boundary and next action
 
-M5 depends on M4's explained-skill, evidence and summary model on approved `main`. Stop until the M4 PR is merged. No M5–M7 implementation or deployment has begun.
+M6 needs the expanded M5 dataset on approved `main`. Stop after M5 delivery until its PR is reviewed and merged. M7 depends on M6. No public deployment has been prepared or performed in this task.
 
 ## Known limitations
 
-- Health Systems is the only subject with full starter niches; the other four have honest pending-guidance overviews until M5.
+- All five subjects now have full starter niches. All sources and associated claims remain labelled for manual editorial review.
 - WHO source links and associated guidance remain review-required; source verification was blocked by network access during M1.
 - Git read/push worked during previous milestones; GitHub API PR creation returned Forbidden. Recheck the specific operations for this milestone.
 - ESLint 9 is pinned for Next.js plugin compatibility and npm reports an upstream deprecation warning.
 
 ## Resume instruction
 
-M4 implementation, validation and branch delivery are complete. Last successful implementation task: M4.5. Create/review/merge its PR through GitHub, then continue from the next milestone without restarting completed work. Resume: “Read AGENTS.md, docs/IMPLEMENTATION_PLAN.md and docs/PROGRESS.md; verify M4 is merged into origin/main, then implement M5 on feat/milestone-5-content-expansion. Preserve completed work and stop at required merge boundaries. Do not merge or deploy publicly automatically.”
+Finish M5 delivery, then create/review/merge its PR through GitHub. Resume: “Read AGENTS.md, docs/IMPLEMENTATION_PLAN.md and docs/PROGRESS.md; verify M5 is merged into origin/main, then implement M6 on feat/milestone-6-quality-assurance. Preserve completed work and proceed to M7 only at the next safe approved-base boundary. Do not merge or deploy publicly automatically.”

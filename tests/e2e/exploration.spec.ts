@@ -57,7 +57,7 @@ test("learners follow academic concepts and related niches without losing the ex
   ).toHaveCount(1);
 });
 
-test("invalid concepts fall back safely and subject navigation preserves pending states", async ({
+test("invalid concepts fall back safely and subject navigation opens expanded content", async ({
   page,
 }) => {
   await page.goto("/topics/health-systems?concept=unknown");
@@ -73,12 +73,11 @@ test("invalid concepts fall back safely and subject navigation preserves pending
     .getByRole("link", { name: "Epidemiology", exact: true })
     .click();
   await expect(
-    page.getByRole("heading", {
-      name: "Detailed guidance is not available yet",
-    }),
-  ).toBeVisible();
+    page.getByRole("link", { name: "Explore this niche" }),
+  ).toHaveCount(2);
   await page
-    .getByRole("link", { name: "Explore the Health Systems case study →" })
+    .getByRole("region", { name: "Explore another subject" })
+    .getByRole("link", { name: "Health Systems", exact: true })
     .click();
   await expect(
     page.getByRole("link", { name: "Explore this niche" }),
@@ -98,7 +97,7 @@ test("all relationship destinations are valid and descriptions fit mobile layout
       name: "Connected concepts and interests",
     });
     const internalLinks = region.locator('a[href^="/topics/"]');
-    await expect(internalLinks).toHaveCount(4);
+    await expect(internalLinks).toHaveCount(id === "health-workforce" ? 4 : 5);
     const destinations = await internalLinks.evaluateAll((links) =>
       links.map((link) => link.getAttribute("href")!),
     );

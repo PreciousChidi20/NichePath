@@ -2,7 +2,7 @@
 
 ## Scope and continuity
 
-Repository: `PreciousChidi20/NichePath`. Approved base: latest merged `main`. Milestones 1–3 are merged (PRs #1–#3); Health Systems has three starter niches and the discovery flow recognises all five agreed MPH subjects.
+Repository: `PreciousChidi20/NichePath`. Approved base: latest merged `main`. Milestones 1–4 are merged (implementation PRs #1, #2, #3 and #5; collaboration documentation PR #4). M5 expands the original Health Systems starter into 11 niches across all five subjects. PROGRESS records actual delivery and subsequent prerequisites.
 
 Read `AGENTS.md` and `docs/PROGRESS.md` before work. This plan defines approved scope; PROGRESS records actual results. Use the existing checkout, architecture and dependencies. Do not restart completed tasks. Amend these documents when evidence or user instructions change the plan.
 

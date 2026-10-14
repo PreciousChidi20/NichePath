@@ -1,0 +1,1451 @@
+{
+  "label": "MPH curated starter dataset",
+  "disclaimer": "Illustrative categories and learning activities, not an official university curriculum. Educational exploration only; pathways are examples, not eligibility advice or employment promises. Starter guidance and linked sources require review before authoritative use.",
+  "topics": [
+    {
+      "id": "health-systems",
+      "title": "Health Systems",
+      "summary": "Explore how people, institutions and resources work together to deliver health services. Start with a concept that makes you curious.",
+      "aliases": [
+        "health systems",
+        "health system",
+        "health services organisation",
+        "health services organization"
+      ],
+      "status": "starter",
+      "nicheIds": [
+        "leadership-governance",
+        "health-financing",
+        "health-workforce"
+      ]
+    },
+    {
+      "id": "epidemiology",
+      "title": "Epidemiology",
+      "summary": "Explore disease patterns, surveillance and study-design questions while keeping uncertainty and alternative explanations visible.",
+      "aliases": [
+        "epidemiology",
+        "epidemiological",
+        "disease surveillance",
+        "outbreak investigation",
+        "disease distribution"
+      ],
+      "status": "starter",
+      "nicheIds": ["infectious-disease-surveillance", "study-design"]
+    },
+    {
+      "id": "biostatistics",
+      "title": "Biostatistics",
+      "summary": "Explore statistical summaries, uncertainty and model interpretation through manageable hypothetical activities.",
+      "aliases": [
+        "biostatistics",
+        "biostatistical",
+        "statistical inference",
+        "confidence intervals",
+        "confidence interval",
+        "regression analysis"
+      ],
+      "status": "starter",
+      "nicheIds": ["statistical-uncertainty", "regression-interpretation"]
+    },
+    {
+      "id": "health-policy",
+      "title": "Health Policy",
+      "summary": "Explore policy options, evidence use, equity and priority setting without assuming one universal policy answer.",
+      "aliases": [
+        "health policy",
+        "health policies",
+        "policy analysis",
+        "public health legislation"
+      ],
+      "status": "starter",
+      "nicheIds": ["policy-evidence", "equity-priority-setting"]
+    },
+    {
+      "id": "health-promotion",
+      "title": "Health Promotion",
+      "summary": "Explore community participation, clear communication and programme learning through hypothetical practice activities.",
+      "aliases": [
+        "health promotion",
+        "health education",
+        "behaviour change",
+        "behavior change"
+      ],
+      "status": "starter",
+      "nicheIds": ["community-engagement", "health-communication"]
+    }
+  ],
+  "niches": [
+    {
+      "id": "leadership-governance",
+      "topicId": "health-systems",
+      "title": "Health leadership and governance",
+      "description": "Explore how health organisations set direction, make decisions and remain accountable to the people they serve.",
+      "practicalApplications": [
+        "Mapping who makes decisions about a local health service and who can hold those decision-makers accountable.",
+        "Considering how community voices can inform service priorities."
+      ],
+      "skills": [
+        {
+          "title": "Stakeholder mapping",
+          "explanation": "Identify who decides, advises and is affected by a service change.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Clear policy communication",
+          "explanation": "Explain a service priority or accountability question in clear language.",
+          "applicationIndex": 1
+        },
+        {
+          "title": "Comparing accountability arrangements",
+          "explanation": "Compare where responsibilities sit and how concerns can be raised.",
+          "applicationIndex": 0
+        }
+      ],
+      "activity": {
+        "title": "Map a service decision",
+        "objective": "Connect a governance concept to a concrete decision and the people affected.",
+        "estimatedMinutes": 30,
+        "instructions": [
+          "Choose a hypothetical decision, such as changing a clinic’s opening hours.",
+          "List five stakeholders and identify who decides, who advises and who is affected.",
+          "Sketch a simple decision map and propose one way patients could give feedback."
+        ],
+        "expectedOutput": "A one-page stakeholder map with a short explanation of one accountability gap.",
+        "reflection": "Which stakeholder voice is missing, and what would you need to check before changing the decision process?"
+      },
+      "nextStep": "Read the linked WHO governance overview, then revise your map with one question about participation or accountability.",
+      "illustrativePathways": [
+        {
+          "kind": "academic",
+          "title": "Further study in health systems management or public administration",
+          "explanation": "A subject domain for further exploration. Check actual programme content and entry requirements with the institution; no specific programme is endorsed."
+        },
+        {
+          "kind": "professional",
+          "title": "Exploring health programme coordination or policy implementation work",
+          "explanation": "A professional domain to learn about, not a vacancy, credential or guaranteed outcome. Responsibilities and eligibility depend on the organisation and setting."
+        }
+      ],
+      "sourceIds": ["who-governance"],
+      "overview": [
+        "Leadership and governance offers a way to examine who sets service priorities, how responsibilities are shared, and how decisions are explained to the public. You might be drawn to the organisational questions behind a service rather than only its clinical work.",
+        "For exploration, separate setting a direction from the rules and accountability arrangements that guide decisions. A hypothetical clinic decision can help you ask whose views are represented, who has authority, and how people can raise concerns. This is draft educational framing, not a description of one country’s system."
+      ],
+      "relatedNiches": [
+        {
+          "nicheId": "health-financing",
+          "explanation": "Decisions about service priorities connect governance to how budgets are allocated and explained. Explore financing to ask how those decisions shape the use of funds.",
+          "sourceIds": ["who-governance", "who-financing"]
+        },
+        {
+          "nicheId": "health-workforce",
+          "explanation": "Organisational responsibilities and leadership decisions connect to how health workers are deployed and supported. Explore workforce questions to see a different side of service management.",
+          "sourceIds": ["who-governance", "who-workforce"]
+        }
+      ],
+      "nextStepOutcome": "An annotated stakeholder map and one participation or accountability question.",
+      "evidence": [
+        {
+          "area": "applications-and-skills",
+          "sourceIds": ["who-governance"],
+          "note": "Proposed background for the niche’s applications and skill framing. Associated claims require review against the linked WHO overview."
+        },
+        {
+          "area": "activity-and-next-step",
+          "sourceIds": ["who-governance"],
+          "note": "The exercise is an original hypothetical practice activity. The proposed reference supports background concepts only; it is not a published or validated worksheet."
+        },
+        {
+          "area": "pathway-context",
+          "sourceIds": ["who-governance"],
+          "note": "References provide proposed subject-domain context only. They do not establish admissions criteria, professional eligibility or employment opportunities."
+        }
+      ]
+    },
+    {
+      "id": "health-financing",
+      "topicId": "health-systems",
+      "title": "Health financing",
+      "description": "Explore how money is raised, pooled and used to pay for health services, and how these arrangements relate to access and financial protection.",
+      "practicalApplications": [
+        "Comparing how a tax-funded scheme and a health insurance arrangement collect funds and pay providers.",
+        "Exploring risk pooling: sharing financial risk across a group rather than leaving each person to bear their own healthcare costs. Health insurance can be one pooling arrangement; pooling is broader than insurance. These connections require source review."
+      ],
+      "skills": [
+        {
+          "title": "Drawing financing flows",
+          "explanation": "Separate revenue collection, a shared pool and payments to providers in a diagram.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Comparing policy trade-offs",
+          "explanation": "Compare inclusion and out-of-pocket costs without assuming one arrangement suits every setting.",
+          "applicationIndex": 1
+        },
+        {
+          "title": "Interpreting basic expenditure information",
+          "explanation": "Read expenditure figures with attention to what they measure and what they leave out.",
+          "applicationIndex": 0
+        }
+      ],
+      "activity": {
+        "title": "Follow the money",
+        "objective": "Distinguish collection, pooling and purchasing in two hypothetical arrangements.",
+        "estimatedMinutes": 35,
+        "instructions": [
+          "Draw a flow for a hypothetical tax-funded service: people and taxes, a pooled public budget, then payments to providers.",
+          "Draw a second flow for a hypothetical insurance scheme: member contributions, an insurance pool, then payments to providers.",
+          "Write two questions about who is included and what costs people still pay. Do not calculate premiums or recommend an insurance product."
+        ],
+        "expectedOutput": "Two labelled financing-flow diagrams and two questions about coverage or financial protection.",
+        "reflection": "Who might be outside each hypothetical pool, and what information would you need before comparing financial protection?"
+      },
+      "nextStep": "Check the WHO financing overview for collection, pooling and purchasing, then annotate one limitation of each hypothetical diagram.",
+      "illustrativePathways": [
+        {
+          "kind": "academic",
+          "title": "Further study in health economics or health financing policy",
+          "explanation": "A subject domain for further exploration. Check actual programme content and entry requirements with the institution; no specific programme is endorsed."
+        },
+        {
+          "kind": "professional",
+          "title": "Exploring health financing analysis, insurance policy or programme budgeting domains",
+          "explanation": "A professional domain to learn about, not a vacancy, credential or guaranteed outcome. Responsibilities and eligibility depend on the organisation and setting."
+        }
+      ],
+      "sourceIds": ["who-financing"],
+      "overview": [
+        "Health financing brings together questions about raising funds, sharing financial risk and paying for services. An interest in access or affordability can lead to exploring these arrangements and the different groups they include.",
+        "Health insurance can be one arrangement for pooling resources, but pooling is broader than insurance. Exploring a hypothetical public budget alongside a hypothetical insurance pool can help distinguish collection, pooling and purchasing. This draft framing needs verification against the proposed WHO reference before authoritative use."
+      ],
+      "relatedNiches": [
+        {
+          "nicheId": "leadership-governance",
+          "explanation": "Financing choices raise questions about who has authority over funds and who is accountable for spending. Explore governance to examine those decision arrangements.",
+          "sourceIds": ["who-financing", "who-governance"]
+        },
+        {
+          "nicheId": "health-workforce",
+          "explanation": "Funding arrangements and workforce planning meet when services consider staffing resources. Explore workforce distribution without assuming that funding alone explains staffing gaps.",
+          "sourceIds": ["who-financing", "who-workforce"]
+        }
+      ],
+      "nextStepOutcome": "Two annotated diagrams, each with one clearly stated limitation.",
+      "evidence": [
+        {
+          "area": "applications-and-skills",
+          "sourceIds": ["who-financing"],
+          "note": "Proposed background for the niche’s applications and skill framing. Associated claims require review against the linked WHO overview."
+        },
+        {
+          "area": "activity-and-next-step",
+          "sourceIds": ["who-financing"],
+          "note": "The exercise is an original hypothetical practice activity. The proposed reference supports background concepts only; it is not a published or validated worksheet."
+        },
+        {
+          "area": "pathway-context",
+          "sourceIds": ["who-financing"],
+          "note": "References provide proposed subject-domain context only. They do not establish admissions criteria, professional eligibility or employment opportunities."
+        }
+      ]
+    },
+    {
+      "id": "health-workforce",
+      "topicId": "health-systems",
+      "title": "Health workforce",
+      "description": "Explore how health workers are educated, deployed, supported and retained to meet population needs.",
+      "practicalApplications": [
+        "Considering why a district may have enough workers overall but unequal distribution between facilities.",
+        "Exploring how working conditions and support might affect retention in underserved areas."
+      ],
+      "skills": [
+        {
+          "title": "Reading workforce indicators",
+          "explanation": "Interpret staffing counts alongside workload, skill mix and population needs.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Needs and capacity mapping",
+          "explanation": "Map available capacity and identify what information is missing before drawing conclusions.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Comparing workforce policy options",
+          "explanation": "Compare recruitment, support or retention options with explicit contextual assumptions.",
+          "applicationIndex": 1
+        }
+      ],
+      "activity": {
+        "title": "Explore a staffing gap",
+        "objective": "Connect workforce distribution to access using a small fictional scenario.",
+        "estimatedMinutes": 30,
+        "instructions": [
+          "Imagine two equally populated districts with four clinics each. District A has 40 health workers; district B has 16.",
+          "Calculate workers per clinic as a simple comparison. State that equal populations and clinic counts do not imply equal health needs.",
+          "List two missing pieces of information and propose one question about recruitment, deployment or retention."
+        ],
+        "expectedOutput": "A short comparison with two limitations and one workforce planning question.",
+        "reflection": "What does the workers-per-clinic comparison leave out, and how could that change your interpretation?"
+      },
+      "nextStep": "Read the WHO workforce overview, then add one consideration about education, distribution or retention to your scenario.",
+      "illustrativePathways": [
+        {
+          "kind": "academic",
+          "title": "Further study in health workforce planning or health services research",
+          "explanation": "A subject domain for further exploration. Check actual programme content and entry requirements with the institution; no specific programme is endorsed."
+        },
+        {
+          "kind": "professional",
+          "title": "Exploring workforce analysis, training coordination or health service management domains",
+          "explanation": "A professional domain to learn about, not a vacancy, credential or guaranteed outcome. Responsibilities and eligibility depend on the organisation and setting."
+        }
+      ],
+      "sourceIds": ["who-workforce"],
+      "overview": [
+        "Health workforce exploration focuses on the people who make health services possible: their education, roles, distribution, working conditions and support. An interest in unequal service capacity may lead you to ask how workforce decisions are made.",
+        "A simple worker count does not explain the full picture. Skills, workload, geography and population needs can change what a staffing comparison means. Treat a fictional staffing scenario as a starting point for questions rather than a staffing recommendation."
+      ],
+      "relatedNiches": [
+        {
+          "nicheId": "leadership-governance",
+          "explanation": "Workforce decisions connect to organisational roles, participation and accountability. Explore governance to ask who shapes deployment or retention decisions.",
+          "sourceIds": ["who-workforce", "who-governance"]
+        },
+        {
+          "nicheId": "health-financing",
+          "explanation": "Questions about workforce resources can connect to service budgets and payment arrangements. Explore financing to examine one part of the resource picture, without treating it as the sole explanation.",
+          "sourceIds": ["who-workforce", "who-financing"]
+        }
+      ],
+      "nextStepOutcome": "A revised staffing comparison with one education, distribution or retention consideration.",
+      "evidence": [
+        {
+          "area": "applications-and-skills",
+          "sourceIds": ["who-workforce"],
+          "note": "Proposed background for the niche’s applications and skill framing. Associated claims require review against the linked WHO overview."
+        },
+        {
+          "area": "activity-and-next-step",
+          "sourceIds": ["who-workforce"],
+          "note": "The exercise is an original hypothetical practice activity. The proposed reference supports background concepts only; it is not a published or validated worksheet."
+        },
+        {
+          "area": "pathway-context",
+          "sourceIds": ["who-workforce"],
+          "note": "References provide proposed subject-domain context only. They do not establish admissions criteria, professional eligibility or employment opportunities."
+        }
+      ]
+    },
+    {
+      "id": "infectious-disease-surveillance",
+      "topicId": "epidemiology",
+      "title": "Infectious disease surveillance",
+      "description": "Explore how routine observations can help describe changes in disease occurrence and raise questions for investigation.",
+      "overview": [
+        "This niche connects an interest in disease patterns to how information is collected, summarised and interpreted over time. A change in reported cases may reflect transmission, reporting practices or both.",
+        "Surveillance is a starting point for investigation rather than proof of a cause. Compare populations, time periods and reporting processes before interpreting a trend."
+      ],
+      "relatedNiches": [
+        {
+          "nicheId": "study-design",
+          "explanation": "A surveillance pattern can lead to a study question; study design helps ask what comparisons and alternative explanations would be needed.",
+          "sourceIds": ["cdc-field-epi"]
+        },
+        {
+          "nicheId": "health-communication",
+          "explanation": "Communicating a reported pattern requires clear language and uncertainty caveats; explore message design without turning counts into unsupported health advice.",
+          "sourceIds": ["cdc-field-epi", "who-promotion"]
+        }
+      ],
+      "practicalApplications": [
+        "Preparing a weekly description of reported cases for a fictional district.",
+        "Considering how changes in reporting could affect an apparent disease trend."
+      ],
+      "skills": [
+        {
+          "title": "Trend interpretation",
+          "explanation": "Describe a pattern while separating observations from explanations.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Denominator awareness",
+          "explanation": "Ask which population and reporting period a count represents.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Data-quality questioning",
+          "explanation": "Identify missing reports and changing case definitions.",
+          "applicationIndex": 1
+        }
+      ],
+      "activity": {
+        "title": "Describe a fictional case trend",
+        "objective": "Separate a reported pattern from possible explanations.",
+        "estimatedMinutes": 30,
+        "instructions": [
+          "Use fictional weekly counts of 8, 12, 20 and 16 cases from one district.",
+          "Draw a simple chart and describe the change without claiming its cause.",
+          "List two reporting changes that could affect the counts and one piece of population information you would need."
+        ],
+        "expectedOutput": "A labelled chart, a short description and three investigation questions.",
+        "reflection": "How could a reporting change alter your interpretation?"
+      },
+      "nextStep": "Read the proposed CDC field epidemiology reference and add one question about data quality or population denominators to your chart.",
+      "nextStepOutcome": "An annotated chart with one additional investigation question.",
+      "illustrativePathways": [
+        {
+          "kind": "academic",
+          "title": "Further study in infectious disease epidemiology",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        },
+        {
+          "kind": "professional",
+          "title": "Exploring surveillance analysis or outbreak-response support",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        }
+      ],
+      "evidence": [
+        {
+          "area": "applications-and-skills",
+          "sourceIds": ["cdc-field-epi"],
+          "note": "Proposed background references for the applications and skill framing; associated claims require source review."
+        },
+        {
+          "area": "activity-and-next-step",
+          "sourceIds": ["cdc-field-epi"],
+          "note": "Original hypothetical practice activity. References provide proposed educational background, not a published or validated exercise."
+        },
+        {
+          "area": "pathway-context",
+          "sourceIds": ["cdc-field-epi"],
+          "note": "Proposed subject-domain context only; references do not endorse programmes, credentials, vacancies or employment guarantees."
+        }
+      ],
+      "sourceIds": ["cdc-field-epi"]
+    },
+    {
+      "id": "study-design",
+      "topicId": "epidemiology",
+      "title": "Study design and causal questions",
+      "description": "Explore how study choices and alternative explanations affect what can be learned about exposures and health outcomes.",
+      "overview": [
+        "An association can suggest a question without establishing a causal relationship. Study design shapes who is compared, what is measured and which explanations remain plausible.",
+        "Use a hypothetical research question to explore selection, confounding and measurement. This starter activity does not establish that any exposure causes disease."
+      ],
+      "relatedNiches": [
+        {
+          "nicheId": "regression-interpretation",
+          "explanation": "Regression interpretation helps examine how adjustment and modelling assumptions relate to the alternative explanations in an observational study.",
+          "sourceIds": ["cdc-field-epi", "nist-statistics"]
+        },
+        {
+          "nicheId": "policy-evidence",
+          "explanation": "Policy evidence appraisal asks how study limitations affect the use of findings in a decision.",
+          "sourceIds": ["cdc-field-epi", "who-governance"]
+        }
+      ],
+      "practicalApplications": [
+        "Choosing a comparison strategy for a fictional exposure-outcome question.",
+        "Identifying possible confounding before interpreting an observational association."
+      ],
+      "skills": [
+        {
+          "title": "Question framing",
+          "explanation": "State a population, exposure, comparison and outcome clearly.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Bias recognition",
+          "explanation": "Consider who enters a study and how measurement may differ.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Confounding awareness",
+          "explanation": "Identify a plausible common cause of exposure and outcome.",
+          "applicationIndex": 1
+        }
+      ],
+      "activity": {
+        "title": "Sketch a study question",
+        "objective": "Explore design choices without making a causal claim.",
+        "estimatedMinutes": 35,
+        "instructions": [
+          "Ask whether a fictional group with access to green space reports more physical activity.",
+          "Describe a possible observational comparison and how activity would be measured.",
+          "List two alternative explanations and one limitation of who participates."
+        ],
+        "expectedOutput": "A one-page question/design sketch with three limitations.",
+        "reflection": "What would your chosen design leave unresolved?"
+      },
+      "nextStep": "Read the proposed CDC reference, then revise one comparison or measurement choice in your sketch.",
+      "nextStepOutcome": "A revised design sketch explaining one trade-off.",
+      "illustrativePathways": [
+        {
+          "kind": "academic",
+          "title": "Further study in epidemiologic methods",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        },
+        {
+          "kind": "professional",
+          "title": "Exploring research coordination or evidence appraisal",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        }
+      ],
+      "evidence": [
+        {
+          "area": "applications-and-skills",
+          "sourceIds": ["cdc-field-epi"],
+          "note": "Proposed background references for the applications and skill framing; associated claims require source review."
+        },
+        {
+          "area": "activity-and-next-step",
+          "sourceIds": ["cdc-field-epi"],
+          "note": "Original hypothetical practice activity. References provide proposed educational background, not a published or validated exercise."
+        },
+        {
+          "area": "pathway-context",
+          "sourceIds": ["cdc-field-epi"],
+          "note": "Proposed subject-domain context only; references do not endorse programmes, credentials, vacancies or employment guarantees."
+        }
+      ],
+      "sourceIds": ["cdc-field-epi"]
+    },
+    {
+      "id": "statistical-uncertainty",
+      "topicId": "biostatistics",
+      "title": "Statistical summaries and uncertainty",
+      "description": "Explore how summaries and uncertainty help communicate what a dataset can and cannot tell us.",
+      "overview": [
+        "A summary compresses observations; it does not describe every individual or remove uncertainty. Sample size, variability and measurement all matter when interpreting a result.",
+        "Compare small fictional samples to practise communicating variation. Confidence intervals require an appropriate statistical method and assumptions; this introductory exercise does not calculate or validate them."
+      ],
+      "relatedNiches": [
+        {
+          "nicheId": "regression-interpretation",
+          "explanation": "Model estimates also carry uncertainty; explore interpretation without treating a fitted relationship as a causal explanation.",
+          "sourceIds": ["nist-statistics"]
+        },
+        {
+          "nicheId": "infectious-disease-surveillance",
+          "explanation": "Surveillance summaries rely on counts and denominators; compare how variation and incomplete reporting can affect a described pattern.",
+          "sourceIds": ["nist-statistics", "cdc-field-epi"]
+        }
+      ],
+      "practicalApplications": [
+        "Summarising fictional health-service waiting times.",
+        "Writing a cautious interpretation of a sample-based result."
+      ],
+      "skills": [
+        {
+          "title": "Descriptive summaries",
+          "explanation": "Compare centre and spread rather than presenting one average alone.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Uncertainty communication",
+          "explanation": "Explain why a small sample may not represent a whole service.",
+          "applicationIndex": 1
+        },
+        {
+          "title": "Assumption checking",
+          "explanation": "Identify what must be known before interpreting an interval.",
+          "applicationIndex": 1
+        }
+      ],
+      "activity": {
+        "title": "Summarise waiting times",
+        "objective": "Compare simple summaries and their limits.",
+        "estimatedMinutes": 25,
+        "instructions": [
+          "Use fictional waiting times of 10, 12, 13, 15 and 40 minutes.",
+          "Calculate the mean and median and describe why they differ.",
+          "Write two sentences on what this small sample cannot establish about all patients."
+        ],
+        "expectedOutput": "A mean/median comparison with a two-sentence limitation note.",
+        "reflection": "Which observations most affect your summary, and what is missing?"
+      },
+      "nextStep": "Read the proposed NIST handbook and add one question about sample variation or uncertainty to your interpretation.",
+      "nextStepOutcome": "A revised interpretation with one uncertainty question.",
+      "illustrativePathways": [
+        {
+          "kind": "academic",
+          "title": "Further study in biostatistics or statistical methods",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        },
+        {
+          "kind": "professional",
+          "title": "Exploring public health data analysis or monitoring",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        }
+      ],
+      "evidence": [
+        {
+          "area": "applications-and-skills",
+          "sourceIds": ["nist-statistics"],
+          "note": "Proposed background references for the applications and skill framing; associated claims require source review."
+        },
+        {
+          "area": "activity-and-next-step",
+          "sourceIds": ["nist-statistics"],
+          "note": "Original hypothetical practice activity. References provide proposed educational background, not a published or validated exercise."
+        },
+        {
+          "area": "pathway-context",
+          "sourceIds": ["nist-statistics"],
+          "note": "Proposed subject-domain context only; references do not endorse programmes, credentials, vacancies or employment guarantees."
+        }
+      ],
+      "sourceIds": ["nist-statistics"]
+    },
+    {
+      "id": "regression-interpretation",
+      "topicId": "biostatistics",
+      "title": "Regression and model interpretation",
+      "description": "Explore how statistical models describe relationships while depending on assumptions and data quality.",
+      "overview": [
+        "A fitted model describes patterns under its specification. It does not automatically establish causation, fairness or accurate predictions outside the observed setting.",
+        "Practise reading a hypothetical model statement and identifying assumptions. This activity does not train a model or provide clinical predictions."
+      ],
+      "relatedNiches": [
+        {
+          "nicheId": "study-design",
+          "explanation": "Study design helps identify selection and confounding questions that a fitted model may not resolve.",
+          "sourceIds": ["nist-statistics", "cdc-field-epi"]
+        },
+        {
+          "nicheId": "statistical-uncertainty",
+          "explanation": "Statistical uncertainty helps communicate variability and limits around model-based summaries.",
+          "sourceIds": ["nist-statistics"]
+        }
+      ],
+      "practicalApplications": [
+        "Interpreting an association in a fictional service-use analysis.",
+        "Asking whether a model could behave differently across groups or settings."
+      ],
+      "skills": [
+        {
+          "title": "Coefficient interpretation",
+          "explanation": "Describe direction and units without converting an association into a cause.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Model-assumption awareness",
+          "explanation": "Ask what was measured, adjusted for and omitted.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Context checking",
+          "explanation": "Consider whether the intended population differs from the data.",
+          "applicationIndex": 1
+        }
+      ],
+      "activity": {
+        "title": "Question a model statement",
+        "objective": "Separate model output from claims the output cannot support.",
+        "estimatedMinutes": 30,
+        "instructions": [
+          "Consider the fictional statement: each extra kilometre from a clinic is associated with fewer visits in an observational model. No numeric estimate is supplied.",
+          "List what you would need to know about the outcome, units, sample and adjustment variables.",
+          "Write a cautious interpretation and two reasons the pattern might not be causal."
+        ],
+        "expectedOutput": "A short interpretation and a checklist of missing model information.",
+        "reflection": "Would your interpretation change in a different population?"
+      },
+      "nextStep": "Read the proposed NIST reference and refine one question about model assumptions or interpretation.",
+      "nextStepOutcome": "An interpretation checklist with one refined assumption question.",
+      "illustrativePathways": [
+        {
+          "kind": "academic",
+          "title": "Further study in applied biostatistics",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        },
+        {
+          "kind": "professional",
+          "title": "Exploring health data modelling or research analysis",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        }
+      ],
+      "evidence": [
+        {
+          "area": "applications-and-skills",
+          "sourceIds": ["nist-statistics"],
+          "note": "Proposed background references for the applications and skill framing; associated claims require source review."
+        },
+        {
+          "area": "activity-and-next-step",
+          "sourceIds": ["nist-statistics"],
+          "note": "Original hypothetical practice activity. References provide proposed educational background, not a published or validated exercise."
+        },
+        {
+          "area": "pathway-context",
+          "sourceIds": ["nist-statistics"],
+          "note": "Proposed subject-domain context only; references do not endorse programmes, credentials, vacancies or employment guarantees."
+        }
+      ],
+      "sourceIds": ["nist-statistics"]
+    },
+    {
+      "id": "policy-evidence",
+      "topicId": "health-policy",
+      "title": "Policy analysis and evidence use",
+      "description": "Explore how evidence, stakeholder views and implementation constraints inform policy options.",
+      "overview": [
+        "Policy analysis involves defining a problem, comparing possible responses and making assumptions visible. Evidence can inform a decision without determining a single correct policy.",
+        "A short options brief can help you connect a broad health concern to trade-offs. Context, public participation and implementation feasibility require attention alongside expected benefits."
+      ],
+      "relatedNiches": [
+        {
+          "nicheId": "equity-priority-setting",
+          "explanation": "Comparing policy options raises equity questions about who benefits and which resource priorities are used.",
+          "sourceIds": ["who-governance", "who-equity", "who-financing"]
+        },
+        {
+          "nicheId": "study-design",
+          "explanation": "Study design helps appraise what an evidence source can establish before using it in an options brief.",
+          "sourceIds": ["who-governance", "cdc-field-epi"]
+        }
+      ],
+      "practicalApplications": [
+        "Comparing fictional options to improve clinic access.",
+        "Identifying evidence gaps and stakeholder questions for a service policy."
+      ],
+      "skills": [
+        {
+          "title": "Options appraisal",
+          "explanation": "Compare potential benefits, limits and feasibility.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Evidence questioning",
+          "explanation": "Distinguish available observations from assumptions.",
+          "applicationIndex": 1
+        },
+        {
+          "title": "Brief writing",
+          "explanation": "Explain trade-offs clearly for a decision audience.",
+          "applicationIndex": 0
+        }
+      ],
+      "activity": {
+        "title": "Write a two-option brief",
+        "objective": "Make the reasoning behind policy choices visible.",
+        "estimatedMinutes": 35,
+        "instructions": [
+          "Use a fictional clinic where patients report difficulty attending during working hours.",
+          "Compare extended hours with appointment scheduling changes using benefits, limits and resource needs.",
+          "Identify one stakeholder to consult and two pieces of evidence still needed."
+        ],
+        "expectedOutput": "A one-page options brief with an evidence-gap list.",
+        "reflection": "Whose perspective is absent from your comparison?"
+      },
+      "nextStep": "Read the proposed WHO governance reference and add one accountability or participation question to your brief.",
+      "nextStepOutcome": "A brief with one added stakeholder or accountability question.",
+      "illustrativePathways": [
+        {
+          "kind": "academic",
+          "title": "Further study in health policy or public administration",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        },
+        {
+          "kind": "professional",
+          "title": "Exploring policy analysis or implementation support",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        }
+      ],
+      "evidence": [
+        {
+          "area": "applications-and-skills",
+          "sourceIds": ["who-governance"],
+          "note": "Proposed background references for the applications and skill framing; associated claims require source review."
+        },
+        {
+          "area": "activity-and-next-step",
+          "sourceIds": ["who-governance"],
+          "note": "Original hypothetical practice activity. References provide proposed educational background, not a published or validated exercise."
+        },
+        {
+          "area": "pathway-context",
+          "sourceIds": ["who-governance"],
+          "note": "Proposed subject-domain context only; references do not endorse programmes, credentials, vacancies or employment guarantees."
+        }
+      ],
+      "sourceIds": ["who-governance"]
+    },
+    {
+      "id": "equity-priority-setting",
+      "topicId": "health-policy",
+      "title": "Equity and priority setting",
+      "description": "Explore how policy choices and resource allocation can affect different population groups.",
+      "overview": [
+        "An equity question asks how opportunities, access or burdens differ across groups and why those differences matter. Priority setting involves explicit choices when resources are limited.",
+        "Explore fictional allocation criteria without claiming one universal formula. Population needs, participation, feasibility and the quality of evidence can all shape a defensible discussion."
+      ],
+      "relatedNiches": [
+        {
+          "nicheId": "health-financing",
+          "explanation": "Priority setting connects to health financing when considering how funds are collected, pooled and allocated. Neither activity recommends an actual allocation.",
+          "sourceIds": ["who-equity", "who-financing"]
+        },
+        {
+          "nicheId": "community-engagement",
+          "explanation": "Community participation can bring perspectives into an equity discussion; consider who is heard when allocation criteria are compared.",
+          "sourceIds": ["who-equity", "who-financing", "who-promotion"]
+        }
+      ],
+      "practicalApplications": [
+        "Comparing hypothetical criteria for allocating an outreach budget.",
+        "Considering who benefits or is overlooked by an access policy."
+      ],
+      "skills": [
+        {
+          "title": "Equity framing",
+          "explanation": "State which groups and access barriers are being compared.",
+          "applicationIndex": 1
+        },
+        {
+          "title": "Criteria comparison",
+          "explanation": "Explain what an allocation criterion values and may miss.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Trade-off communication",
+          "explanation": "Make tensions and missing evidence visible.",
+          "applicationIndex": 0
+        }
+      ],
+      "activity": {
+        "title": "Compare allocation criteria",
+        "objective": "Explore equity questions without recommending a real allocation.",
+        "estimatedMinutes": 30,
+        "instructions": [
+          "Imagine a fictional outreach budget that can serve only one of two districts. Do not assign real population data.",
+          "Compare equal funding, greater documented need and implementation capacity as possible criteria.",
+          "Write one benefit, one limitation and one evidence need for each criterion."
+        ],
+        "expectedOutput": "A three-criterion comparison table and one consultation question.",
+        "reflection": "Who should help decide which criterion matters?"
+      },
+      "nextStep": "Read the proposed WHO equity and financing references and revise one criterion to make an assumption explicit.",
+      "nextStepOutcome": "A revised criteria table with one explicit assumption.",
+      "illustrativePathways": [
+        {
+          "kind": "academic",
+          "title": "Further study in health equity or health policy",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        },
+        {
+          "kind": "professional",
+          "title": "Exploring equitable programme planning or policy evaluation",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        }
+      ],
+      "evidence": [
+        {
+          "area": "applications-and-skills",
+          "sourceIds": ["who-equity", "who-financing"],
+          "note": "Proposed background references for the applications and skill framing; associated claims require source review."
+        },
+        {
+          "area": "activity-and-next-step",
+          "sourceIds": ["who-equity", "who-financing"],
+          "note": "Original hypothetical practice activity. References provide proposed educational background, not a published or validated exercise."
+        },
+        {
+          "area": "pathway-context",
+          "sourceIds": ["who-equity", "who-financing"],
+          "note": "Proposed subject-domain context only; references do not endorse programmes, credentials, vacancies or employment guarantees."
+        }
+      ],
+      "sourceIds": ["who-equity", "who-financing"]
+    },
+    {
+      "id": "community-engagement",
+      "topicId": "health-promotion",
+      "title": "Community engagement and participation",
+      "description": "Explore how communities can help shape learning activities and health-promotion priorities.",
+      "overview": [
+        "Engagement begins with listening and considering whose knowledge informs a programme. Participation should not be treated as a guarantee that every voice has equal influence.",
+        "Practise planning a hypothetical listening activity, with attention to access, consent and how feedback might change the plan. Do not collect personal information for this exercise."
+      ],
+      "relatedNiches": [
+        {
+          "nicheId": "health-communication",
+          "explanation": "Listening to communities can inform communication choices and the barriers a message should acknowledge.",
+          "sourceIds": ["who-promotion"]
+        },
+        {
+          "nicheId": "equity-priority-setting",
+          "explanation": "Participation connects to whose needs and access barriers inform policy priorities; explore the decision questions alongside the listening exercise.",
+          "sourceIds": ["who-promotion", "who-equity", "who-financing"]
+        }
+      ],
+      "practicalApplications": [
+        "Planning a fictional community listening session about a health-promotion activity.",
+        "Considering barriers that may prevent people from participating."
+      ],
+      "skills": [
+        {
+          "title": "Listening-question design",
+          "explanation": "Use open questions that do not assume a preferred answer.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Participation mapping",
+          "explanation": "Identify missing voices and access barriers.",
+          "applicationIndex": 1
+        },
+        {
+          "title": "Feedback planning",
+          "explanation": "Explain how input could influence a programme choice.",
+          "applicationIndex": 0
+        }
+      ],
+      "activity": {
+        "title": "Plan a listening session",
+        "objective": "Connect participation to a practical programme question.",
+        "estimatedMinutes": 30,
+        "instructions": [
+          "Choose a hypothetical community activity, such as a walking group.",
+          "Draft three open questions and list who might be excluded by the session time or format.",
+          "Propose one way feedback could change the activity. Do not interview people or collect personal data."
+        ],
+        "expectedOutput": "A session outline with three questions and one inclusion adjustment.",
+        "reflection": "How will participants know what happened to their feedback?"
+      },
+      "nextStep": "Read the proposed WHO health promotion reference and revise one question or participation arrangement.",
+      "nextStepOutcome": "A revised listening outline with one participation improvement.",
+      "illustrativePathways": [
+        {
+          "kind": "academic",
+          "title": "Further study in health promotion or community health",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        },
+        {
+          "kind": "professional",
+          "title": "Exploring community programme design or engagement support",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        }
+      ],
+      "evidence": [
+        {
+          "area": "applications-and-skills",
+          "sourceIds": ["who-promotion"],
+          "note": "Proposed background references for the applications and skill framing; associated claims require source review."
+        },
+        {
+          "area": "activity-and-next-step",
+          "sourceIds": ["who-promotion"],
+          "note": "Original hypothetical practice activity. References provide proposed educational background, not a published or validated exercise."
+        },
+        {
+          "area": "pathway-context",
+          "sourceIds": ["who-promotion"],
+          "note": "Proposed subject-domain context only; references do not endorse programmes, credentials, vacancies or employment guarantees."
+        }
+      ],
+      "sourceIds": ["who-promotion"]
+    },
+    {
+      "id": "health-communication",
+      "topicId": "health-promotion",
+      "title": "Health communication and programme learning",
+      "description": "Explore how clear messages and feedback support health-promotion learning without assuming that information alone changes behaviour.",
+      "overview": [
+        "Communication involves audience, purpose, language and channels. A message can be clear yet still miss barriers that affect what people can do.",
+        "Use a fictional invitation to practise plain language and identify what feedback would help improve it. This is an educational exercise, not advice about a real health risk or a validated behaviour-change intervention."
+      ],
+      "relatedNiches": [
+        {
+          "nicheId": "community-engagement",
+          "explanation": "Community listening can test assumptions about an audience and shape how feedback is used.",
+          "sourceIds": ["who-promotion"]
+        },
+        {
+          "nicheId": "infectious-disease-surveillance",
+          "explanation": "Surveillance patterns may need public communication; explore how uncertainty and reporting limits should remain visible in a message.",
+          "sourceIds": ["who-promotion", "cdc-field-epi"]
+        }
+      ],
+      "practicalApplications": [
+        "Drafting a plain-language invitation to a fictional community activity.",
+        "Choosing questions to learn whether a message was understood and useful."
+      ],
+      "skills": [
+        {
+          "title": "Audience awareness",
+          "explanation": "Adapt purpose, language and channel to a stated audience.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Plain-language writing",
+          "explanation": "Make an invitation understandable without making health promises.",
+          "applicationIndex": 0
+        },
+        {
+          "title": "Feedback interpretation",
+          "explanation": "Separate reach or understanding from evidence of behaviour change.",
+          "applicationIndex": 1
+        }
+      ],
+      "activity": {
+        "title": "Improve a fictional invitation",
+        "objective": "Connect message clarity to programme learning.",
+        "estimatedMinutes": 25,
+        "instructions": [
+          "Draft a short invitation to a hypothetical walking group without making clinical benefit claims.",
+          "Revise it to state who it is for, when it meets and how to ask questions.",
+          "Add two feedback questions: one about understanding and one about practical barriers."
+        ],
+        "expectedOutput": "A revised invitation and two feedback questions.",
+        "reflection": "What would feedback tell you, and what would it not prove?"
+      },
+      "nextStep": "Read the proposed WHO promotion reference and revise one message or feedback question to acknowledge a barrier.",
+      "nextStepOutcome": "An invitation or feedback question with one explicit barrier consideration.",
+      "illustrativePathways": [
+        {
+          "kind": "academic",
+          "title": "Further study in health communication or programme evaluation",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        },
+        {
+          "kind": "professional",
+          "title": "Exploring health-promotion communication or programme learning",
+          "explanation": "Illustrative subject/domain only. Check actual programme or role requirements in your context; this is not eligibility advice, a vacancy or an outcome guarantee."
+        }
+      ],
+      "evidence": [
+        {
+          "area": "applications-and-skills",
+          "sourceIds": ["who-promotion"],
+          "note": "Proposed background references for the applications and skill framing; associated claims require source review."
+        },
+        {
+          "area": "activity-and-next-step",
+          "sourceIds": ["who-promotion"],
+          "note": "Original hypothetical practice activity. References provide proposed educational background, not a published or validated exercise."
+        },
+        {
+          "area": "pathway-context",
+          "sourceIds": ["who-promotion"],
+          "note": "Proposed subject-domain context only; references do not endorse programmes, credentials, vacancies or employment guarantees."
+        }
+      ],
+      "sourceIds": ["who-promotion"]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "accountability",
+      "topicId": "health-systems",
+      "title": "Accountability",
+      "aliases": ["accountability", "governance", "leadership"],
+      "interestPrompt": "Who makes decisions, and how are they held accountable?",
+      "connections": [
+        {
+          "nicheId": "leadership-governance",
+          "explanation": "An interest in accountability connects to how health organisations assign responsibility and explain decisions.",
+          "sourceIds": ["who-governance"]
+        }
+      ]
+    },
+    {
+      "id": "participation",
+      "topicId": "health-systems",
+      "title": "Community participation",
+      "aliases": [
+        "community participation",
+        "stakeholder engagement",
+        "patient voice"
+      ],
+      "interestPrompt": "How can communities help shape a service?",
+      "connections": [
+        {
+          "nicheId": "leadership-governance",
+          "explanation": "An interest in participation connects to stakeholder engagement and whose views inform service priorities.",
+          "sourceIds": ["who-governance"]
+        }
+      ]
+    },
+    {
+      "id": "risk-pooling",
+      "topicId": "health-systems",
+      "title": "Risk pooling and insurance",
+      "aliases": ["risk pooling", "pooling", "health insurance", "insurance"],
+      "interestPrompt": "How can people share the financial risk of healthcare?",
+      "connections": [
+        {
+          "nicheId": "health-financing",
+          "explanation": "An interest in risk sharing connects to pooled financing arrangements, including health insurance where applicable. Insurance and pooling are not interchangeable terms.",
+          "sourceIds": ["who-financing"]
+        }
+      ]
+    },
+    {
+      "id": "financial-protection",
+      "topicId": "health-systems",
+      "title": "Financial protection",
+      "aliases": ["financial protection", "out of pocket", "health financing"],
+      "interestPrompt": "What happens when healthcare costs are hard to afford?",
+      "connections": [
+        {
+          "nicheId": "health-financing",
+          "explanation": "An interest in affordability connects to how financing arrangements affect what people pay when using care.",
+          "sourceIds": ["who-financing"]
+        }
+      ]
+    },
+    {
+      "id": "workforce-distribution",
+      "topicId": "health-systems",
+      "title": "Workforce distribution",
+      "aliases": [
+        "health workforce",
+        "workforce",
+        "staffing",
+        "workforce distribution"
+      ],
+      "interestPrompt": "Why are health workers unevenly distributed?",
+      "connections": [
+        {
+          "nicheId": "health-workforce",
+          "explanation": "An interest in service capacity connects to workforce planning and the distribution of health workers.",
+          "sourceIds": ["who-workforce"]
+        }
+      ]
+    },
+    {
+      "id": "retention",
+      "topicId": "health-systems",
+      "title": "Supporting and retaining workers",
+      "aliases": ["retention", "health worker retention", "working conditions"],
+      "interestPrompt": "What helps health workers stay and do their work well?",
+      "connections": [
+        {
+          "nicheId": "health-workforce",
+          "explanation": "An interest in working conditions connects to how health services support and retain their workforce.",
+          "sourceIds": ["who-workforce"]
+        }
+      ]
+    },
+    {
+      "id": "case-trends",
+      "topicId": "epidemiology",
+      "title": "Reported case trends",
+      "aliases": ["case trends", "disease surveillance"],
+      "interestPrompt": "What can a change in reported cases tell us?",
+      "connections": [
+        {
+          "nicheId": "infectious-disease-surveillance",
+          "explanation": "An interest in reported case trends connects to infectious disease surveillance: Explore how routine observations can help describe changes in disease occurrence and raise questions for investigation.",
+          "sourceIds": ["cdc-field-epi"]
+        }
+      ]
+    },
+    {
+      "id": "reporting-quality",
+      "topicId": "epidemiology",
+      "title": "Reporting quality",
+      "aliases": ["reporting quality", "case definitions"],
+      "interestPrompt": "What could change the reported pattern without changing disease risk?",
+      "connections": [
+        {
+          "nicheId": "infectious-disease-surveillance",
+          "explanation": "An interest in reporting quality connects to infectious disease surveillance: Explore how routine observations can help describe changes in disease occurrence and raise questions for investigation.",
+          "sourceIds": ["cdc-field-epi"]
+        }
+      ]
+    },
+    {
+      "id": "confounding",
+      "topicId": "epidemiology",
+      "title": "Confounding",
+      "aliases": ["confounding"],
+      "interestPrompt": "What else could explain an observed association?",
+      "connections": [
+        {
+          "nicheId": "study-design",
+          "explanation": "An interest in confounding connects to study design and causal questions: Explore how study choices and alternative explanations affect what can be learned about exposures and health outcomes.",
+          "sourceIds": ["cdc-field-epi"]
+        }
+      ]
+    },
+    {
+      "id": "study-comparisons",
+      "topicId": "epidemiology",
+      "title": "Study comparisons",
+      "aliases": ["study design", "observational comparison"],
+      "interestPrompt": "Who should be compared to answer a specific question?",
+      "connections": [
+        {
+          "nicheId": "study-design",
+          "explanation": "An interest in study comparisons connects to study design and causal questions: Explore how study choices and alternative explanations affect what can be learned about exposures and health outcomes.",
+          "sourceIds": ["cdc-field-epi"]
+        }
+      ]
+    },
+    {
+      "id": "sample-variation",
+      "topicId": "biostatistics",
+      "title": "Sample variation",
+      "aliases": [
+        "sample variation",
+        "confidence intervals",
+        "confidence interval"
+      ],
+      "interestPrompt": "How much could a sample-based result vary?",
+      "connections": [
+        {
+          "nicheId": "statistical-uncertainty",
+          "explanation": "An interest in sample variation connects to statistical summaries and uncertainty: Explore how summaries and uncertainty help communicate what a dataset can and cannot tell us.",
+          "sourceIds": ["nist-statistics"]
+        }
+      ]
+    },
+    {
+      "id": "descriptive-summaries",
+      "topicId": "biostatistics",
+      "title": "Descriptive summaries",
+      "aliases": ["descriptive summaries", "mean and median"],
+      "interestPrompt": "What does an average hide?",
+      "connections": [
+        {
+          "nicheId": "statistical-uncertainty",
+          "explanation": "An interest in descriptive summaries connects to statistical summaries and uncertainty: Explore how summaries and uncertainty help communicate what a dataset can and cannot tell us.",
+          "sourceIds": ["nist-statistics"]
+        }
+      ]
+    },
+    {
+      "id": "regression-assumptions",
+      "topicId": "biostatistics",
+      "title": "Regression assumptions",
+      "aliases": ["regression analysis", "model assumptions"],
+      "interestPrompt": "What assumptions sit behind a fitted model?",
+      "connections": [
+        {
+          "nicheId": "regression-interpretation",
+          "explanation": "An interest in regression assumptions connects to regression and model interpretation: Explore how statistical models describe relationships while depending on assumptions and data quality.",
+          "sourceIds": ["nist-statistics"]
+        }
+      ]
+    },
+    {
+      "id": "association-interpretation",
+      "topicId": "biostatistics",
+      "title": "Association interpretation",
+      "aliases": ["coefficient interpretation", "model interpretation"],
+      "interestPrompt": "How can a result be communicated without overstating it?",
+      "connections": [
+        {
+          "nicheId": "regression-interpretation",
+          "explanation": "An interest in association interpretation connects to regression and model interpretation: Explore how statistical models describe relationships while depending on assumptions and data quality.",
+          "sourceIds": ["nist-statistics"]
+        }
+      ]
+    },
+    {
+      "id": "policy-options",
+      "topicId": "health-policy",
+      "title": "Policy options",
+      "aliases": ["policy analysis", "policy options"],
+      "interestPrompt": "Which responses to a health problem could be compared?",
+      "connections": [
+        {
+          "nicheId": "policy-evidence",
+          "explanation": "An interest in policy options connects to policy analysis and evidence use: Explore how evidence, stakeholder views and implementation constraints inform policy options.",
+          "sourceIds": ["who-governance"]
+        }
+      ]
+    },
+    {
+      "id": "evidence-gaps",
+      "topicId": "health-policy",
+      "title": "Policy evidence gaps",
+      "aliases": ["policy evidence", "public health legislation"],
+      "interestPrompt": "What evidence and perspectives are missing from a decision?",
+      "connections": [
+        {
+          "nicheId": "policy-evidence",
+          "explanation": "An interest in policy evidence gaps connects to policy analysis and evidence use: Explore how evidence, stakeholder views and implementation constraints inform policy options.",
+          "sourceIds": ["who-governance"]
+        }
+      ]
+    },
+    {
+      "id": "equity-criteria",
+      "topicId": "health-policy",
+      "title": "Equity criteria",
+      "aliases": ["equity criteria", "priority setting"],
+      "interestPrompt": "How should needs and access barriers shape priorities?",
+      "connections": [
+        {
+          "nicheId": "equity-priority-setting",
+          "explanation": "An interest in equity criteria connects to equity and priority setting: Explore how policy choices and resource allocation can affect different population groups.",
+          "sourceIds": ["who-equity", "who-financing"]
+        }
+      ]
+    },
+    {
+      "id": "allocation-tradeoffs",
+      "topicId": "health-policy",
+      "title": "Allocation trade-offs",
+      "aliases": ["allocation criteria", "equitable allocation"],
+      "interestPrompt": "What does an allocation choice value or overlook?",
+      "connections": [
+        {
+          "nicheId": "equity-priority-setting",
+          "explanation": "An interest in allocation trade-offs connects to equity and priority setting: Explore how policy choices and resource allocation can affect different population groups.",
+          "sourceIds": ["who-equity", "who-financing"]
+        }
+      ]
+    },
+    {
+      "id": "community-listening",
+      "topicId": "health-promotion",
+      "title": "Community listening",
+      "aliases": ["community listening", "participation mapping"],
+      "interestPrompt": "Whose knowledge could improve a programme?",
+      "connections": [
+        {
+          "nicheId": "community-engagement",
+          "explanation": "An interest in community listening connects to community engagement and participation: Explore how communities can help shape learning activities and health-promotion priorities.",
+          "sourceIds": ["who-promotion"]
+        }
+      ]
+    },
+    {
+      "id": "inclusive-participation",
+      "topicId": "health-promotion",
+      "title": "Inclusive participation",
+      "aliases": ["inclusive participation", "health education"],
+      "interestPrompt": "Who might be left out of a learning activity?",
+      "connections": [
+        {
+          "nicheId": "community-engagement",
+          "explanation": "An interest in inclusive participation connects to community engagement and participation: Explore how communities can help shape learning activities and health-promotion priorities.",
+          "sourceIds": ["who-promotion"]
+        }
+      ]
+    },
+    {
+      "id": "audience-messages",
+      "topicId": "health-promotion",
+      "title": "Audience and messages",
+      "aliases": ["health communication", "plain language"],
+      "interestPrompt": "How can a message fit the people it is intended for?",
+      "connections": [
+        {
+          "nicheId": "health-communication",
+          "explanation": "An interest in audience and messages connects to health communication and programme learning: Explore how clear messages and feedback support health-promotion learning without assuming that information alone changes behaviour.",
+          "sourceIds": ["who-promotion"]
+        }
+      ]
+    },
+    {
+      "id": "programme-feedback",
+      "topicId": "health-promotion",
+      "title": "Programme feedback",
+      "aliases": ["behaviour change", "behavior change", "programme feedback"],
+      "interestPrompt": "What could feedback tell you about a programme?",
+      "connections": [
+        {
+          "nicheId": "health-communication",
+          "explanation": "An interest in programme feedback connects to health communication and programme learning: Explore how clear messages and feedback support health-promotion learning without assuming that information alone changes behaviour.",
+          "sourceIds": ["who-promotion"]
+        }
+      ]
+    },
+    {
+      "id": "resource-allocation",
+      "topicId": "health-systems",
+      "title": "Resource allocation",
+      "aliases": ["resource allocation", "health budget allocation"],
+      "interestPrompt": "How do service priorities shape the use of limited resources?",
+      "connections": [
+        {
+          "nicheId": "health-financing",
+          "explanation": "Resource allocation connects financing arrangements to decisions about service priorities, responsibilities and accountability.",
+          "sourceIds": ["who-financing", "who-governance"]
+        },
+        {
+          "nicheId": "leadership-governance",
+          "explanation": "Resource allocation connects financing arrangements to decisions about service priorities, responsibilities and accountability.",
+          "sourceIds": ["who-financing", "who-governance"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "who-governance",
+      "title": "Health systems governance",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/health-topics/health-systems-governance",
+      "supports": "Review the governance overview against the leadership, accountability and decision-making connections.",
+      "verification": "review-required",
+      "reviewedOn": null,
+      "reviewNote": "Link access attempted during Milestone 5 on 14 October 2026; the network proxy returned HTTP 403. Accessibility, current page content and support for these specific guidance claims remain unverified. No quotations, academic citations or publication dates are claimed."
+    },
+    {
+      "id": "who-financing",
+      "title": "Health financing",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/health-topics/health-financing",
+      "supports": "Review financing guidance and the connections to revenue collection, pooling, purchasing and health insurance.",
+      "verification": "review-required",
+      "reviewedOn": null,
+      "reviewNote": "Link access attempted during Milestone 5 on 14 October 2026; the network proxy returned HTTP 403. Accessibility, current page content and support for these specific guidance claims remain unverified. No quotations, academic citations or publication dates are claimed."
+    },
+    {
+      "id": "who-workforce",
+      "title": "Health workforce",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/health-topics/health-workforce",
+      "supports": "Review workforce planning, distribution, education and retention connections.",
+      "verification": "review-required",
+      "reviewedOn": null,
+      "reviewNote": "Link access attempted during Milestone 5 on 14 October 2026; the network proxy returned HTTP 403. Accessibility, current page content and support for these specific guidance claims remain unverified. No quotations, academic citations or publication dates are claimed."
+    },
+    {
+      "id": "cdc-field-epi",
+      "title": "Field Epidemiology Manual (proposed reference)",
+      "publisher": "Centers for Disease Control and Prevention",
+      "url": "https://www.cdc.gov/field-epi-manual/",
+      "supports": "Review surveillance and study-design concepts, limitations and population comparisons.",
+      "verification": "review-required",
+      "reviewedOn": null,
+      "reviewNote": "Link access attempted during Milestone 5 on 14 October 2026; the network proxy returned HTTP 403. Accessibility, current page content and support for these specific guidance claims remain unverified. No quotations, academic citations or publication dates are claimed."
+    },
+    {
+      "id": "nist-statistics",
+      "title": "Engineering Statistics Handbook (proposed reference)",
+      "publisher": "National Institute of Standards and Technology",
+      "url": "https://www.itl.nist.gov/div898/handbook/",
+      "supports": "Review statistical summaries, uncertainty, regression and model interpretation. This is a general statistics reference, not an MPH curriculum.",
+      "verification": "review-required",
+      "reviewedOn": null,
+      "reviewNote": "Link access attempted during Milestone 5 on 14 October 2026; the network proxy returned HTTP 403. Accessibility, current page content and support for these specific guidance claims remain unverified. No quotations, academic citations or publication dates are claimed."
+    },
+    {
+      "id": "who-equity",
+      "title": "Health equity (proposed reference)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/health-topics/health-equity",
+      "supports": "Review equity framing and policy priority-setting concepts.",
+      "verification": "review-required",
+      "reviewedOn": null,
+      "reviewNote": "Link access attempted during Milestone 5 on 14 October 2026; the network proxy returned HTTP 403. Accessibility, current page content and support for these specific guidance claims remain unverified. No quotations, academic citations or publication dates are claimed."
+    },
+    {
+      "id": "who-promotion",
+      "title": "Health promotion (proposed reference)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/health-topics/health-promotion",
+      "supports": "Review promotion, participation and communication context. Original exercises are not WHO tools.",
+      "verification": "review-required",
+      "reviewedOn": null,
+      "reviewNote": "Link access attempted during Milestone 5 on 14 October 2026; the network proxy returned HTTP 403. Accessibility, current page content and support for these specific guidance claims remain unverified. No quotations, academic citations or publication dates are claimed."
+    }
+  ]
+}

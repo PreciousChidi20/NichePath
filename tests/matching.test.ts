@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import rawContent from "../data/health-systems.json";
+import rawContent from "../data/mph-content.json";
 import { validateContent } from "../lib/content-model";
 import { matchTopics, MAX_INPUT_LENGTH } from "../lib/matching";
 const data = validateContent(rawContent);
@@ -83,7 +83,7 @@ test("keeps ambiguous subject matches for learner confirmation", () => {
     ["health-systems", "epidemiology"],
   );
 });
-test("recognises planned subjects without fabricating guidance", () => {
+test("recognises canonical subjects without fabricating extra concepts", () => {
   const result = matchTopics("Biostatistics", data);
   assert.deepEqual(result.matches, [
     { topicId: "biostatistics", conceptIds: [] },
@@ -96,4 +96,16 @@ test("handles empty, oversized and unsupported inputs", () => {
     "too-long",
   );
   assert.equal(matchTopics("marine biology", data).kind, "unsupported");
+});
+test("insurance, pooling and resource allocation retain a Health Systems connection", () => {
+  const result = matchTopics(
+    "health insurance, risk pooling and resource allocation",
+    data,
+  );
+  assert.deepEqual(result.matches, [
+    {
+      topicId: "health-systems",
+      conceptIds: ["risk-pooling", "resource-allocation"],
+    },
+  ]);
 });
