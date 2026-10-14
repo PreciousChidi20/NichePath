@@ -2,7 +2,7 @@
 
 ## Current checkpoint
 
-Repository: `PreciousChidi20/NichePath`. Approved base: main at `d7103dd` (verified 14 October 2026). Milestones 1–5 are merged. M6 is complete, validated and pushed for review on `feat/milestone-6-quality-assurance`. M7 has not started.
+Repository: `PreciousChidi20/NichePath`. Approved base: main at `cddc069` (verified 14 October 2026). Milestones 1–6 are merged; PR #7 and ancestry include M6 implementation `f91ac78` and delivery `0cec5c5`. M7 deployment/demo preparation is complete, validated and pushed for review; PR creation returned Forbidden. No new public deployment is authorised or performed by this task; the owner confirms an existing deployment (see reconciliation below).
 
 Consult [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for scope and acceptance criteria. Record actual evidence here; a planned command or saved description is not proof of success.
 
@@ -13,8 +13,8 @@ Consult [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for scope and acceptanc
 | 3 — Niche exploration | Merged                          | `feat/milestone-3-niche-exploration`         | [#3](https://github.com/PreciousChidi20/NichePath/pull/3) | Main history contains `38e4077` and `4e0268f`; merged at `357450c`.                      |
 | 4 — Skills/pathways   | Merged                          | `feat/milestone-4-practical-pathways`        | [#5](https://github.com/PreciousChidi20/NichePath/pull/5) | Main contains `8fc7c32` and `a33460a`; merge `9192fb5`.                                  |
 | 5 — Content expansion | Merged                          | `feat/milestone-5-content-expansion`         | [#6](https://github.com/PreciousChidi20/NichePath/pull/6) | Main includes `f15966c` and `6987c0a`; merge `d7103dd`.                                  |
-| 6 — QA                | Complete; awaiting review/merge | `feat/milestone-6-quality-assurance`         | Not created                                               | Checks passed; pushed. PR API returned Forbidden; manual creation/review/merge required. |
-| 7 — Deployment/demo   | Not started                     | `feat/milestone-7-deployment-demo` (planned) | Not created                                               | Requires M6 merged; public deployment needs approval.                                    |
+| 6 — QA                | Merged | `feat/milestone-6-quality-assurance` | [#7](https://github.com/PreciousChidi20/NichePath/pull/7) | Main contains `f91ac78`/`0cec5c5`; merge `cddc069`. |
+| 7 — Deployment/demo | Prepared; awaiting review/merge | `feat/milestone-7-deployment-demo` | Not created | Checks passed; branch pushed; manual PR required. No public deployment. |
 
 ## Milestone 3 task ledger
 
@@ -147,9 +147,32 @@ Lint: passed, zero warnings/errors. TypeScript/content validation/build: passed.
 - Copy-ready title/description, including AI Collaboration: [PULL_REQUEST_MILESTONE_6.md](PULL_REQUEST_MILESTONE_6.md).
 - [Create the PR manually](https://github.com/PreciousChidi20/NichePath/compare/main...feat/milestone-6-quality-assurance?expand=1), using base main and this feature branch. Paste the prepared title/description, review and merge when satisfied. This comparison link is not a created PR URL.
 
+## Milestone 7 task ledger
+
+- [x] M7.1 Prepare native Next.js Vercel configuration and tested Node 24 major; no new runtime dependencies, secrets or integrations.
+- [x] M7.2 Rewrite README as the implemented MVP; add exact local setup, validation and deployment instructions.
+- [x] M7.3 Prepare three-minute demo script/checklist; exact production sequence rehearsed successfully at 1280px and 360px.
+- [x] M7.4 Inspect deployment access metadata: no exposed deployment tool, Vercel CLI, linked project or VERCEL_TOKEN/ORG_ID/PROJECT_ID variables. No secret values inspected. Provide manual Vercel steps.
+- [ ] M7.5 Existing deployment live verification attempted after owner authorisation; blocked by environment proxy. No new deployment performed.
+- [x] M7.6 Complete checks and collaboration/delivery records, commit/push and attempt PR (API Forbidden; manual PR required).
+
+## Milestone 7 verification
+
+Clean frozen-lockfile `npm ci` passed on Node 24.19.0/npm 11.9.0. Lint passed with zero warnings; TypeScript passed; 33 unit/component tests passed with no failures/skips; content validation and production build passed (5 topics, 11 niches, 23 concepts, 7 review-required sources). All 44 browser tests passed (45.9s), with no failures/skips. The exact production demo sequence passed at 1280px and 360px: risk-pooling input, learner confirmation, financing guidance, copy/review notes, related governance, reset, ambiguity and unsupported input. Upstream ESLint deprecation warning remains. No Vercel/cloud/public-URL check is claimed.
+
+## Milestone 7 delivery
+
+- Repository: `PreciousChidi20/NichePath`; base `main` at `cddc0699b82d5df3abb0e08bbda06653bdb585b9`.
+- Branch: `feat/milestone-7-deployment-demo`, created from that approved base.
+- Implementation commit: `265498f8f04d2b6f339ab8833d603d30172b13e7`; committed, pushed and remote ref verified. This final delivery evidence is saved in a subsequent documentation commit (see branch history for its hash).
+- `gh pr create` returned `Post https://api.github.com/graphql: Forbidden`. No M7 PR was created by this task; no PR number/URL is invented.
+- [Open the PR form](https://github.com/PreciousChidi20/NichePath/compare/main...feat/milestone-7-deployment-demo?expand=1), base `main`, compare this feature branch. Paste [PULL_REQUEST_MILESTONE_7.md](PULL_REQUEST_MILESTONE_7.md), review Files changed/checks, and merge manually when satisfied. The comparison link is not a created PR URL.
+- No automatic merge, hosting integration or public deployment occurred. Local production server used for rehearsal was stopped. At initial preparation, public/cloud verification was unrun; subsequent authorised live attempts were proxy-blocked (see reconciliation below).
+- No environment configuration draft changes were needed for the existing working local setup; reusable commands are documented in README/DEPLOYMENT.
+
 ## Merge boundary and next action
 
-M7 requires M6 merged into approved main. Stop after this delivery until review/merge. Public deployment still requires explicit approval of the concrete prepared configuration. No M7 implementation or public deployment has begun.
+M6 prerequisite is now verified merged. Prepare M7 for review and stop after delivery. The owner must review/merge; any public publication requires explicit approval of the concrete account/settings in DEPLOYMENT.md. No further feature milestone is approved.
 
 ## Known limitations
 
@@ -160,4 +183,22 @@ M7 requires M6 merged into approved main. Stop after this delivery until review/
 
 ## Resume instruction
 
-M6 implementation, validation and branch delivery are complete. Last successful implementation task: M6.5. Create/review/merge the M6 PR before proceeding; preserve completed work. Resume: “Read AGENTS.md, docs/IMPLEMENTATION_PLAN.md and docs/PROGRESS.md; verify M6 is merged into origin/main, then implement M7 on feat/milestone-7-deployment-demo. Preserve completed work. Prepare deployment and demo instructions, but do not merge or deploy publicly automatically.”
+M7 preparation, local validation/rehearsal and branch delivery are complete. Last completed task: M7.6. Create/review/merge the PR manually; preserve M1–M7 work. No further feature milestone is approved. Exact resume for a later deployment: “Read AGENTS.md, docs/PROGRESS.md and docs/DEPLOYMENT.md; verify Milestone 7 is merged into main. Inspect the existing Vercel project/settings and deployment automation; record its actual production branch/deployed commit and run the manual live checklist if accessible. Do not create another project. Deploy publicly only after explicit approval, then record the real URL/commit and smoke-test results. Do not rebuild completed milestones or merge automatically.”
+
+## Existing deployment reconciliation — 14 October 2026
+
+- Owner-confirmed URL: https://niche-path.vercel.app/. Owner reports connecting GitHub to Vercel and accessing/using the application. This corrects any implication that absence of local deployment access meant no existing deployment.
+- Production branch, deployed commit and whether M7 is included remain unknown. Git remote main is `cddc069`; M7 is still a separate branch at this inspection. This alone cannot identify what Vercel runs.
+- Actual curl attempt: exit 56, `CONNECT tunnel failed, response 403`; response from envoy proxy, not the app. Actual Chromium attempt at 360px: `net::ERR_TUNNEL_CONNECTION_FAILED`, one failed document request, no application content. No app console/page errors observed because navigation never reached the app.
+- Page load, live learner journey, activities/next steps, invalid routes, mobile layout, M6 UI behaviour and deployment commit metadata could not be verified. These checks are blocked, not application test failures. Use the manual live checklist in DEPLOYMENT.md.
+- Repo configuration is internally consistent; Node 24 may change the next cloud runtime and vercel.json may override current build/install settings. Compare with the existing project's dashboard before merging. No config/account changes, duplicate project, credential replacement or new deployment occurred.
+- Existing Git integration may build previews on feature pushes and production on the configured production branch; a merge to main may publish depending on settings. No generated deployment was independently observed.
+- Documentation corrections remain on the M7 branch; validation and delivery evidence follow below. Preserve earlier local results and milestone history.
+
+### Reconciliation validation and delivery
+
+Fresh checks in this reconciliation: lint (zero warnings), TypeScript, content validation and production build passed; 33 unit/component tests and 44 local browser tests passed (46.5s), no final failures/skips. The first browser invocation could not start because the previous local rehearsal server still held port 3000; its identified remaining process was stopped and the fresh production suite passed. No live learner checks executed beyond the blocked navigation attempt. `git diff --check` passed.
+
+GitHub open-PR lookup for this branch returned GraphQL Forbidden, so the current PR could not be identified/updated. No duplicate PR creation is attempted without knowing whether one already exists. Updated copy-ready description: PULL_REQUEST_MILESTONE_7.md. Documentation-only correction commit/push will be recorded in a following delivery entry; no application or configuration files were changed in this reconciliation.
+
+Correction commit `e2daaa5567323e39acab26d8a69dd1585014a61a` was committed and pushed to `feat/milestone-7-deployment-demo`; the remote feature ref was verified at that hash. Main remained `cddc0699b82d5df3abb0e08bbda06653bdb585b9`. This evidence is saved in a subsequent ordinary documentation commit. No merge, direct deployment or account change occurred. Update the existing PR with the saved description if one exists; otherwise use the M7 comparison link above to create it. Before merging, inspect the existing Vercel runtime/build settings and automatic deployment behaviour. Remaining verification: actual production branch/commit, live manual checklist and M6/M7 inclusion.
