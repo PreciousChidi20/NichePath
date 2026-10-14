@@ -6,6 +6,8 @@ import { NicheConnections } from "@/components/niche-connections";
 import { NextStepSummary } from "@/components/next-step-summary";
 import { buildNextStepSummary } from "@/lib/summary";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return content.niches.map((niche) => ({
     topicId: niche.topicId,

@@ -41,6 +41,8 @@ The repository's `.npmrc` directs npm's cache to `/tmp/nichepath-npm-cache`, whi
 
 ## Validation
 
+Milestone 6 adds automated Axe accessibility scans, keyboard-only navigation and broader privacy checks. `docs/QA_REPORT.md` records the results and limits. Accessibility tooling is development-only; the application has no new runtime dependency. Automated checks complement manual/assistive-technology review rather than certifying accessibility.
+
 ```sh
 npm run lint
 npm run validate:content
