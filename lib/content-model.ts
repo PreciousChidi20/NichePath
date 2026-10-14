@@ -86,7 +86,17 @@ export const contentSchema = z
                 .strict(),
             ),
             practicalApplications: texts,
-            skills: texts,
+            skills: z
+              .array(
+                z
+                  .object({
+                    title: text,
+                    explanation: text,
+                    applicationIndex: z.number().int().nonnegative(),
+                  })
+                  .strict(),
+              )
+              .min(1),
             activity: z
               .object({
                 title: text,
@@ -94,10 +104,37 @@ export const contentSchema = z
                 estimatedMinutes: z.number().int().positive(),
                 instructions: texts,
                 expectedOutput: text,
+                reflection: text,
               })
               .strict(),
             nextStep: text,
-            illustrativePathways: texts,
+            nextStepOutcome: text,
+            illustrativePathways: z
+              .array(
+                z
+                  .object({
+                    kind: z.enum(["academic", "professional"]),
+                    title: text,
+                    explanation: text,
+                  })
+                  .strict(),
+              )
+              .min(1),
+            evidence: z
+              .array(
+                z
+                  .object({
+                    area: z.enum([
+                      "applications-and-skills",
+                      "activity-and-next-step",
+                      "pathway-context",
+                    ]),
+                    sourceIds: z.array(id).min(1),
+                    note: text,
+                  })
+                  .strict(),
+              )
+              .length(3),
             sourceIds: z.array(id).min(1),
           })
           .strict(),
@@ -157,6 +194,18 @@ export function validateContent(input: unknown): Content {
     if (!topics.get(niche.topicId)?.nicheIds.includes(niche.id))
       problems.push(`${niche.id}: missing owning topic reference`);
     checkSources(niche.sourceIds, niche.id);
+    for (const skill of niche.skills)
+      if (skill.applicationIndex >= niche.practicalApplications.length)
+        problems.push(`${niche.id}: skill references missing application`);
+    if (new Set(niche.evidence.map((entry) => entry.area)).size !== 3)
+      problems.push(`${niche.id}: evidence areas must be unique and complete`);
+    for (const entry of niche.evidence) {
+      checkSources(entry.sourceIds, niche.id);
+      if (entry.sourceIds.some((id) => !niche.sourceIds.includes(id)))
+        problems.push(
+          `${niche.id}: evidence source must be included in niche sources`,
+        );
+    }
     const relatedIds = niche.relatedNiches.map((relation) => relation.nicheId);
     if (new Set(relatedIds).size !== relatedIds.length)
       problems.push(`${niche.id}: duplicate related niches`);

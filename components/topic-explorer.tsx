@@ -129,7 +129,10 @@ export function TopicExplorer({
                   </p>
                 </div>
                 <p className="text-sm muted">
-                  Professional domain: {niche.illustrativePathways[1]}
+                  Professional domain:{" "}
+                  {niche.illustrativePathways.find(
+                    (pathway) => pathway.kind === "professional",
+                  )?.title ?? "Not curated yet"}
                 </p>
                 <Link
                   className="card-link"

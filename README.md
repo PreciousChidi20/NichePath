@@ -14,6 +14,7 @@ Milestone 3 adds fuller Health Systems niche overviews, explicit concept connect
 
 See `docs/IMPLEMENTATION_PLAN.md` for the complete M3–M7 roadmap and `docs/PROGRESS.md` for the current checkpoint, checks, delivery status and exact resume instruction. Implement dependent milestones only after their preceding PR is merged into the approved base.
 
+Milestone 4 explains skills and their practical connections, adds activity reflection and next-step outputs, distinguishes illustrative academic/professional domains, and maps proposed references to guidance areas. A read-only curated summary can be copied to the device clipboard on explicit request, with a selectable fallback if copying is unavailable. Coursework excerpts are never included. Source verification and expansion to other subjects remain outstanding.
 ## Development with OpenAI Codex
 
 NichePath's owner defined the product concept and requirements. OpenAI Codex assisted with planning, implementation, testing and GitHub preparation. The [collaboration log](docs/CODEX_COLLABORATION.md) records milestone-specific contributions, commit/PR references and evidence limitations. Git author identities are preserved; they do not independently establish AI authorship.
