@@ -2,19 +2,19 @@
 
 ## Current checkpoint
 
-Repository: `PreciousChidi20/NichePath`. Approved base: main at `d7103dd` (verified 14 October 2026). Milestones 1–5 are merged. M6 implementation and validation are complete on `feat/milestone-6-quality-assurance`; Git delivery is pending. M7 has not started.
+Repository: `PreciousChidi20/NichePath`. Approved base: main at `d7103dd` (verified 14 October 2026). Milestones 1–5 are merged. M6 is complete, validated and pushed for review on `feat/milestone-6-quality-assurance`. M7 has not started.
 
 Consult [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for scope and acceptance criteria. Record actual evidence here; a planned command or saved description is not proof of success.
 
-| Milestone             | Status                        | Branch                                       | PR                                                        | Evidence/blocker                                                            |
-| --------------------- | ----------------------------- | -------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------- |
-| 1 — Foundation        | Merged                        | `feat/nichepath-mvp-milestone-1`             | [#1](https://github.com/PreciousChidi20/NichePath/pull/1) | Main history contains `3dacf05`; Health Systems starter journey present.    |
-| 2 — Topic discovery   | Merged                        | `feat/milestone-2-topic-discovery`           | [#2](https://github.com/PreciousChidi20/NichePath/pull/2) | Main history contains `579e9c2`; five subject discovery and AGENTS present. |
-| 3 — Niche exploration | Merged                        | `feat/milestone-3-niche-exploration`         | [#3](https://github.com/PreciousChidi20/NichePath/pull/3) | Main history contains `38e4077` and `4e0268f`; merged at `357450c`.         |
-| 4 — Skills/pathways   | Merged                        | `feat/milestone-4-practical-pathways`        | [#5](https://github.com/PreciousChidi20/NichePath/pull/5) | Main contains `8fc7c32` and `a33460a`; merge `9192fb5`.                     |
-| 5 — Content expansion | Merged                        | `feat/milestone-5-content-expansion`         | [#6](https://github.com/PreciousChidi20/NichePath/pull/6) | Main includes `f15966c` and `6987c0a`; merge `d7103dd`.                     |
-| 6 — QA                | Implemented; delivery pending | `feat/milestone-6-quality-assurance`         | Not created                                               | Checks passed; Git delivery pending.                                        |
-| 7 — Deployment/demo   | Not started                   | `feat/milestone-7-deployment-demo` (planned) | Not created                                               | Requires M6 merged; public deployment needs approval.                       |
+| Milestone             | Status                          | Branch                                       | PR                                                        | Evidence/blocker                                                                         |
+| --------------------- | ------------------------------- | -------------------------------------------- | --------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| 1 — Foundation        | Merged                          | `feat/nichepath-mvp-milestone-1`             | [#1](https://github.com/PreciousChidi20/NichePath/pull/1) | Main history contains `3dacf05`; Health Systems starter journey present.                 |
+| 2 — Topic discovery   | Merged                          | `feat/milestone-2-topic-discovery`           | [#2](https://github.com/PreciousChidi20/NichePath/pull/2) | Main history contains `579e9c2`; five subject discovery and AGENTS present.              |
+| 3 — Niche exploration | Merged                          | `feat/milestone-3-niche-exploration`         | [#3](https://github.com/PreciousChidi20/NichePath/pull/3) | Main history contains `38e4077` and `4e0268f`; merged at `357450c`.                      |
+| 4 — Skills/pathways   | Merged                          | `feat/milestone-4-practical-pathways`        | [#5](https://github.com/PreciousChidi20/NichePath/pull/5) | Main contains `8fc7c32` and `a33460a`; merge `9192fb5`.                                  |
+| 5 — Content expansion | Merged                          | `feat/milestone-5-content-expansion`         | [#6](https://github.com/PreciousChidi20/NichePath/pull/6) | Main includes `f15966c` and `6987c0a`; merge `d7103dd`.                                  |
+| 6 — QA                | Complete; awaiting review/merge | `feat/milestone-6-quality-assurance`         | Not created                                               | Checks passed; pushed. PR API returned Forbidden; manual creation/review/merge required. |
+| 7 — Deployment/demo   | Not started                     | `feat/milestone-7-deployment-demo` (planned) | Not created                                               | Requires M6 merged; public deployment needs approval.                                    |
 
 ## Milestone 3 task ledger
 
@@ -130,11 +130,22 @@ Internal content inspection covered distinct niches, complete hypothetical exerc
 - [x] M6.3 Broaden excerpt privacy checks to headers, console, history and storage/cache/cookies, browser back and reload.
 - [x] M6.4 Preserve 33 unit/component tests; expand to 44 browser tests, including pending clipboard and Axe coverage.
 - [x] M6.5 Run lint/type/content/build/full browser checks; fix introduced loading/404 regression without weakening assertions.
-- [ ] Commit/push, attempt PR and record actual delivery.
+- [x] Commit/push, attempt PR and record actual delivery.
 
 ## Milestone 6 verification
 
 Lint: passed, zero warnings/errors. TypeScript/content validation/build: passed. Unit/component: 33 passed; browser: 44 passed, no final failures/skips. Forty-four Axe scans reported zero configured-rule violations. Initial experimental root loading caused HTTP 200 not-found responses; it was removed, and final strict 404 checks pass. See [QA_REPORT.md](QA_REPORT.md) for evidence and limitations. No screen-reader certification or external source verification is claimed.
+
+## Milestone 6 delivery evidence
+
+- Repository: `PreciousChidi20/NichePath`; base: `main`.
+- Feature branch: `feat/milestone-6-quality-assurance`.
+- Implementation commit: `f91ac788059bd59b411d5bef9e07444d2804c1c1`.
+- Push succeeded and remote feature HEAD was verified at the implementation hash. This delivery record is a subsequent documentation commit; see Git history for its hash.
+- Main remained at `d7103ddf13dcc16401d6ac3634efd7aa52414be3`; no automatic merge or public deployment occurred.
+- `gh pr create` returned GraphQL Forbidden. No M6 PR was created by this task; no PR number is inferred.
+- Copy-ready title/description, including AI Collaboration: [PULL_REQUEST_MILESTONE_6.md](PULL_REQUEST_MILESTONE_6.md).
+- [Create the PR manually](https://github.com/PreciousChidi20/NichePath/compare/main...feat/milestone-6-quality-assurance?expand=1), using base main and this feature branch. Paste the prepared title/description, review and merge when satisfied. This comparison link is not a created PR URL.
 
 ## Merge boundary and next action
 
@@ -149,4 +160,4 @@ M7 requires M6 merged into approved main. Stop after this delivery until review/
 
 ## Resume instruction
 
-Finish M6 delivery, then create/review/merge its PR. Resume: “Read AGENTS.md, docs/IMPLEMENTATION_PLAN.md and docs/PROGRESS.md; verify M6 is merged into origin/main, then implement M7 on feat/milestone-7-deployment-demo. Preserve completed work. Prepare deployment and demo instructions, but do not merge or deploy publicly automatically.”
+M6 implementation, validation and branch delivery are complete. Last successful implementation task: M6.5. Create/review/merge the M6 PR before proceeding; preserve completed work. Resume: “Read AGENTS.md, docs/IMPLEMENTATION_PLAN.md and docs/PROGRESS.md; verify M6 is merged into origin/main, then implement M7 on feat/milestone-7-deployment-demo. Preserve completed work. Prepare deployment and demo instructions, but do not merge or deploy publicly automatically.”
