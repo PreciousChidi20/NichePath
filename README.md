@@ -59,9 +59,9 @@ The test configuration intentionally uses an explicit executable. Port 3000 must
 
 ## Deployment and demo
 
-Vercel is the prepared Next.js deployment target. [Deployment instructions](docs/DEPLOYMENT.md) describe settings, the publication approval boundary, smoke checks and rollback. `vercel.json` preserves native Next.js routing; no static-export or output-directory override is used.
+The owner confirms an existing Vercel deployment at **https://niche-path.vercel.app/** and reports using it. Its production branch and deployed commit have not been independently established. [Deployment instructions](docs/DEPLOYMENT.md) describe settings, the publication approval boundary, smoke checks and rollback. `vercel.json` preserves native Next.js routing; no static-export or output-directory override is used.
 
-**This work prepares deployment; it does not establish a live application.** Do not publish or enable automatic public deployments without the owner's explicit approval. The [demo script and rehearsal checklist](docs/HACKATHON_DEMO.md) can be used against a local production build first.
+**Milestone 7 did not create this existing deployment.** Independent live checks were blocked by the test environment's proxy (CONNECT HTTP 403 / Chromium tunnel failure), so application health and inclusion of Milestone 6/7 are not verified here. Review the existing project rather than creating a duplicate. Node 24 and repository build settings need comparison with current Vercel settings. Merging to the configured production branch may deploy automatically; do not merge or change production settings without approval. The [demo script and rehearsal checklist](docs/HACKATHON_DEMO.md) can be used against a local production build first.
 
 ## Content and limitations
 

@@ -2,7 +2,7 @@
 
 ## Preparation
 
-Run the production build/start instructions in README, or use a verified public deployment only after publication approval. Use synthetic text only. Start on the homepage with empty input, set the browser to a 360px viewport for a short mobile demonstration, then switch to desktop if useful. Have the financing summary visible/selectable as a fallback if clipboard permission is denied. Do not describe unreviewed references as verified citations.
+Run the local production build/start instructions in README, or rehearse against the owner-confirmed existing URL https://niche-path.vercel.app/. Its deployed revision is unknown and independent live checks were proxy-blocked, so follow the deployment guide's live checklist before claiming the script passes there. No new publication is needed to inspect this existing site. Use synthetic text only. Start on the homepage with empty input, set the browser to a 360px viewport for a short mobile demonstration, then switch to desktop if useful. Have the financing summary visible/selectable as a fallback if clipboard permission is denied. Do not describe unreviewed references as verified citations.
 
 ## Three-minute script
 
@@ -28,7 +28,7 @@ The activity is a take-away exercise, not something to complete during the three
 - [ ] Related governance navigation works; home input is cleared.
 - [ ] Ambiguous and unsupported examples show the expected messages; direct subject shortcuts remain usable.
 - [ ] 360px layout and keyboard focus are usable; no personal/sensitive examples are used.
-- [ ] Know the limitations: starter content/manual source review, deterministic matching, Chromium-focused automated QA, no public deployment established by this preparation.
+- [ ] Know the limitations: starter content/manual source review, deterministic matching, Chromium-focused automated QA, existing deployment is owner-confirmed but live smoke tests/revision remain independently unverified.
 
 ## Evidence and future enhancements
 
