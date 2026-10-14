@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createElement } from "react";
-import rawContent from "../data/health-systems.json";
+import rawContent from "../data/mph-content.json";
 import { validateContent } from "../lib/content-model";
 import { getNicheExploration } from "../lib/exploration";
 import { NicheConnections } from "../components/niche-connections";
@@ -22,11 +22,11 @@ test("error fallback does not expose raw error contents and offers recovery", ()
   assert.match(markup, /Return to topic discovery/);
 });
 
-test("all Health Systems niches have detailed descriptions and resolved curated connections", () => {
+test("all curated niches have detailed descriptions and resolved curated connections", () => {
   for (const niche of data.niches) {
     assert.equal(niche.overview.length, 2);
     const result = getNicheExploration(data, niche);
-    assert.equal(result.concepts.length, 2);
+    assert.ok(result.concepts.length >= 2);
     assert.equal(result.related.length, 2);
     assert.ok(
       result.related.every((relation) => relation.niche.id !== niche.id),
@@ -79,8 +79,10 @@ test("topic explorer supports a no-content view and invalid concept fallback", (
   assert.match(empty, /Choose another supported topic/);
   const invalid = renderToStaticMarkup(
     createElement(TopicExplorer, {
-      concepts: data.concepts,
-      niches: data.niches,
+      concepts: data.concepts.filter(
+        (item) => item.topicId === "health-systems",
+      ),
+      niches: data.niches.filter((item) => item.topicId === "health-systems"),
       sources: data.sources,
       initialConceptId: "unknown",
     }),

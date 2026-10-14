@@ -53,9 +53,9 @@ export default function Home() {
         <div className="eyebrow">The bigger picture</div>
         <h2 id="subjects-title">Five subjects. Find your starting point.</h2>
         <p className="muted">
-          Discover any of these subjects. Health Systems has starter niche
-          guidance; the other four have topic overviews, with detailed guidance
-          still planned.
+          Explore two or three curated niches in each subject, with practical
+          activities and next steps. All starter guidance is labelled for source
+          review.
         </p>
         <TopicShortcuts topics={content.topics} />
       </section>

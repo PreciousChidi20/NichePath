@@ -75,8 +75,8 @@ export default async function TopicPage({
       <section className="panel mt-8" aria-labelledby="other-subjects-title">
         <h2 id="other-subjects-title">Explore another subject</h2>
         <p className="muted">
-          Keep exploring through the five agreed MPH subject areas. Detailed
-          niche guidance is currently available for Health Systems.
+          Keep exploring through the five agreed MPH subject areas. Each has
+          curated starter niches, activities and next steps.
         </p>
         <TopicShortcuts
           topics={content.topics.filter((item) => item.id !== topicId)}

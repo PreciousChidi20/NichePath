@@ -50,14 +50,14 @@ No shareable Codex task URLs, task IDs or exported transcript artifacts are avai
 ## Scope not established or not completed
 
 - The initial README commit `8e579d0014bc59b8a2d893b41e1726a77bfcbf61` predates the observed implementation work. No Codex contribution to its creation is established. The session shows subsequent read-only onboarding inspection, not authorship of that initial commit.
-- M5–M7 are planned, not implemented in the available history/session. A roadmap is not completion evidence.
+- At the original retrospective checkpoint, M5–M7 were planned and unimplemented; subsequent entries below record later work. A roadmap is not completion evidence.
 - No exact percentage of AI-written code, per-line authorship, external-session activity, hackathon outcome, source verification or live deployment is established.
 - Git merge messages establish the recorded PR numbers/ancestry, not their current bodies, review comments or checks. Live API inspection failed; do not describe unseen PR metadata as verified.
 - Historical test counts above are session/documentation evidence, not new runs performed by this documentation change or proof of GitHub CI execution.
 
-## Current PR: copy-ready AI Collaboration addendum
+## Earlier M4 PR: copy-ready AI Collaboration addendum (historical)
 
-The latest implementation review unit is M4. Its live PR cannot be identified/edited through the available API. Append this section to its existing description without replacing the rest; fill in a real task URL only if one becomes available:
+At that retrospective checkpoint, the latest implementation review unit was M4. Its live PR cannot be identified/edited through the available API. Append this section to its existing description without replacing the rest; fill in a real task URL only if one becomes available:
 
 ```markdown
 ## AI Collaboration
@@ -72,3 +72,11 @@ See docs/CODEX_COLLABORATION.md for evidence boundaries and milestone-specific r
 ## Future recording practice
 
 For every future milestone, record the human's scope/decisions, concrete Codex assistance, evidence category, actual commit and PR links, genuine task references when available, checks with their provenance, limitations and delivery status. Update the record when a real PR/merge/task link is verified. Never invent task IDs, attribution percentages, citations, test results or successful GitHub operations. Do not rewrite past commits to add retroactive credit.
+
+## Follow-up: merged baseline and Milestone 5
+
+On 14 October 2026, fetched main at `9192fb5` was inspected. Merge messages/ancestry establish collaboration-documentation [PR #4](https://github.com/PreciousChidi20/NichePath/pull/4) at `68133cd` and M4 [PR #5](https://github.com/PreciousChidi20/NichePath/pull/5) at `9192fb5`, including implementation `8fc7c32` and delivery `a33460a`. This supersedes the earlier inspection's unmerged M4 status; live PR descriptions remain inaccessible through the API.
+
+The owner authorised “Complete Remaining MVP Milestones (5–7)” with separate approved-base branches and merge boundaries. Session-observed Codex assistance for M5: inspect merged functionality; preserve the three Health Systems niches; author eight additional hypothetical starter niches across four MPH topics; add concept/related-interest relationships and resource-allocation connections; update JSON consumers and tests; attempt source access, document proxy 403 results and retain review-required flags; prepare the separate review unit. These statements describe this available conversation, not Git authorship proof. No shareable task ID or URL is available.
+
+Dataset: 11 niches, 23 concepts, seven proposed reference records. No external source content was verified. Actual session results: lint/TypeScript/content/build passed; 33 unit/component and 34 browser tests passed. One initial browser run had two stale focused-list expectations; corrected tests passed on rerun. Implementation [f15966c6209fc060c3d0da269b7e67d61d3bb767](https://github.com/PreciousChidi20/NichePath/commit/f15966c6209fc060c3d0da269b7e67d61d3bb767) was committed and pushed on `feat/milestone-5-content-expansion`, with remote ref verified. PR creation returned GraphQL Forbidden; no PR URL is invented. This delivery record is a subsequent documentation commit, not a modification of the implementation commit. See PROGRESS for the current checkpoint. M6/M7 implementation has not begun and public deployment remains unapproved.

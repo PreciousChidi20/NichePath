@@ -185,7 +185,7 @@ export default async function NichePage({
         <div className="eyebrow">Read, question, verify</div>
         <h2 id="sources-title">Sources to review</h2>
         <p className="muted">
-          Proposed WHO reference pages, not verified citations. This environment
+          Proposed reference pages, not verified citations. This environment
           could not access them. Check the pages and their support for this
           guidance before relying on the starter content.
         </p>

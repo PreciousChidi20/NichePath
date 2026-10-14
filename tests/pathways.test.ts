@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import raw from "../data/health-systems.json";
+import raw from "../data/mph-content.json";
 import { validateContent } from "../lib/content-model";
 import { buildNextStepSummary } from "../lib/summary";
 const data = validateContent(raw);
@@ -40,7 +40,11 @@ test("rejects missing evidence sources and empty skill explanations", () => {
 });
 test("summaries include actionable steps, outputs, source URLs and review caveats", () => {
   for (const niche of data.niches) {
-    const summary = buildNextStepSummary(data.topics[0], niche, data.sources);
+    const summary = buildNextStepSummary(
+      data.topics.find((topic) => topic.id === niche.topicId)!,
+      niche,
+      data.sources,
+    );
     for (const text of [
       niche.activity.title,
       niche.activity.expectedOutput,
@@ -48,7 +52,7 @@ test("summaries include actionable steps, outputs, source URLs and review caveat
       niche.nextStepOutcome,
       "SOURCE REVIEW REQUIRED",
       "not entry requirements",
-      "https://www.who.int/",
+      data.sources.find((source) => source.id === niche.sourceIds[0])!.url,
     ])
       assert.ok(summary.includes(text));
   }
