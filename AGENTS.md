@@ -64,6 +64,12 @@ Keep `docs/PROGRESS.md` updated with actual task completion, test results, branc
 
 Validation commands: `npm run lint`, `npm run typecheck`, `npm test`, `npm run validate:content`, `npm run build`, then `npm run test:e2e`. Browser tests require a free port 3000 and Chromium (see README). Keep command exit statuses intact; report failures, skipped checks and unavailable checks accurately.
 
+## Accurate AI collaboration documentation
+
+Read and update `docs/CODEX_COLLABORATION.md` for each future milestone. Record the human's scope and decisions, concrete Codex assistance, evidence provenance, actual commit/PR links, genuine task URLs or IDs only when available, checks and limitations. Distinguish repository-verified changes from session-observed AI involvement; Git identities alone do not prove AI authorship. Do not invent contributions, task references, attribution percentages or results. Do not rewrite, amend, squash or force-push historical commits to add attribution.
+
+Add an **AI Collaboration** section to each milestone PR description. Preserve the existing description. If API access is unavailable, provide a copy-ready addendum and report that the live PR was not updated. Never infer a PR number or edit an unidentified PR. Refresh the collaboration record when a real PR merge or task link is verified.
+
 ## Mandatory final report for every milestone
 
 Always provide:
