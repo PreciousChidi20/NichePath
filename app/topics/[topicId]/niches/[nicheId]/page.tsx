@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { content, getNiche, getSources, getTopic } from "@/lib/content";
 import { SourceList } from "@/components/source-list";
 import { NicheConnections } from "@/components/niche-connections";
+import { NextStepSummary } from "@/components/next-step-summary";
+import { buildNextStepSummary } from "@/lib/summary";
 
 export function generateStaticParams() {
   return content.niches.map((niche) => ({
@@ -61,9 +63,16 @@ export default async function NichePage({
               ))}
             </ul>
             <h3 className="mt-7">Skills to explore</h3>
-            <ul className="skill-list">
+            <ul className="content-list">
               {niche.skills.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item.title}>
+                  <strong>{item.title}</strong>
+                  <p>{item.explanation}</p>
+                  <p className="text-sm muted mt-2">
+                    Practice connection:{" "}
+                    {niche.practicalApplications[item.applicationIndex]}
+                  </p>
+                </li>
               ))}
             </ul>
           </section>
@@ -85,6 +94,8 @@ export default async function NichePage({
               <strong>Your output</strong>
               <p>{niche.activity.expectedOutput}</p>
             </div>
+            <h3 className="mt-6">Reflect on your activity</h3>
+            <p>{niche.activity.reflection}</p>
             <p className="mt-4 text-sm muted">
               An original practice activity using hypothetical examples. It is
               not an assessed task or a validated professional tool.
@@ -96,12 +107,23 @@ export default async function NichePage({
             <div className="eyebrow">One small next step</div>
             <h2>Keep your curiosity moving.</h2>
             <p>{niche.nextStep}</p>
+            <p className="mt-4">
+              <strong>Your next-step output:</strong> {niche.nextStepOutcome}
+            </p>
           </section>
           <section className="panel">
             <h2>Where this could lead</h2>
             <ul className="content-list">
               {niche.illustrativePathways.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item.title}>
+                  <span className="badge">
+                    {item.kind === "academic"
+                      ? "Academic exploration"
+                      : "Professional domain"}
+                  </span>
+                  <p className="mt-2 font-semibold">{item.title}</p>
+                  <p className="text-sm muted mt-2">{item.explanation}</p>
+                </li>
               ))}
             </ul>
             <p className="mt-4 text-sm muted">
@@ -112,6 +134,52 @@ export default async function NichePage({
           </section>
         </aside>
       </div>
+      <NextStepSummary
+        summary={buildNextStepSummary(topic, niche, content.sources)}
+      />
+      <section className="panel mt-8" aria-labelledby="evidence-title">
+        <div className="eyebrow">Understand the evidence</div>
+        <h2 id="evidence-title">How references relate to this guidance</h2>
+        <p className="muted">
+          These are proposed educational references. Link availability and
+          support for associated claims require review. Original activities and
+          illustrative pathways are not presented as published source materials.
+        </p>
+        <ul className="content-list mt-5">
+          {niche.evidence.map((entry) => (
+            <li key={entry.area}>
+              <strong>
+                {
+                  {
+                    "applications-and-skills": "Applications and skills",
+                    "activity-and-next-step": "Activity and next step",
+                    "pathway-context": "Pathway context",
+                  }[entry.area]
+                }
+              </strong>
+              <p>{entry.note}</p>
+              <ul className="mt-2 text-sm">
+                {getSources(entry.sourceIds).map((source) => (
+                  <li key={source.id}>
+                    <a
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {source.publisher}: {source.title}
+                    </a>{" "}
+                    <span className="badge">
+                      {source.verification === "verified"
+                        ? "Reviewed"
+                        : "Source review required"}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </section>
       <NicheConnections data={content} niche={niche} />
       <section className="panel mt-8" aria-labelledby="sources-title">
         <div className="eyebrow">Read, question, verify</div>
