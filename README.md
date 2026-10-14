@@ -14,6 +14,10 @@ Milestone 3 adds fuller Health Systems niche overviews, explicit concept connect
 
 See `docs/IMPLEMENTATION_PLAN.md` for the complete M3–M7 roadmap and `docs/PROGRESS.md` for the current checkpoint, checks, delivery status and exact resume instruction. Implement dependent milestones only after their preceding PR is merged into the approved base.
 
+## Development with OpenAI Codex
+
+NichePath's owner defined the product concept and requirements. OpenAI Codex assisted with planning, implementation, testing and GitHub preparation. The [collaboration log](docs/CODEX_COLLABORATION.md) records milestone-specific contributions, commit/PR references and evidence limitations. Git author identities are preserved; they do not independently establish AI authorship.
+
 ## Run locally
 
 Use Node.js 24 (tested with 24.19.0) and npm. Work in the existing checkout; no separate worktree is needed.
